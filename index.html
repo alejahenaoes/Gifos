@@ -3,39 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.scss">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="main.js"></script>
     <title>GIFOS</title>
 
 </head>
 <body>
+    <!-- header -->
+    <div class="pageContainer">
+    <div class="purpleRectangle"></div>
     <div class="navBar">
         <header class="Header">
                 <figure class="logo">
                     <img src="./assets/logo-mobile.svg" alt="LogoMobile">
                 </figure>
+                <figure class="burger">
+                    <img src="./assets/burger.svg" alt="burgermobile">
+                </figure>
+                
         </header>
     </div>
     <section class="searchBoxMain">
         <div class="searchBox">
-           <div class="tittleHome">
-            <h1>Inspírate, busca, guarda, y crea los mejores </h1><span style="color: #50e3c2">GIFOS</span>
-            <ul class="menu-list">
-                <li class="menu-list-item">
-                    <a class="link" href="#">Modo Nocturno</a>
-                </li>
-                <li class="menu-list-item">
-                    <a class="link" href="#">Favoritos</a>
-                </li>
-                <li class="menu-list-item">
-                    <a class="link" href="#">Mis GIFOS</a>
-                </li>
-            </ul>
-        </div>
+            <div class="tittleHome">
+                <h3>Inspírate, busca, guarda, y crea los mejores <span class="gifosWord"  style="color: #50E3C2;">GIFOS</span></h3>
+            </div>
+                <ul class="menu-list">
+                    <li class="menu-list-item"><a class="link" href="#">Modo Nocturno</a></li>
+                    <li class="menu-list-item"><a class="link" href="#">Favoritos</a></li>
+                    <li class="menu-list-item"><a class="link" href="#">Mis GIFOS</a></li>
+                </ul>
+            
+    <!-- Main section home -->
             <div class="imageTopSearch">
                 <img src="./assets/ilustra_header.svg" alt="ImagenSupBuscador">
             </div>
+            <div class="searchBar">
+               <input type="text" placeholder="Busca GIFOS y más">
+            </div>
+            <h6>Trending:</h6>
+            <div class="textDownBar">
+                <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
+            </div>
         </div>
     </section>
+    
+    </div>
 </body>
 </html>
