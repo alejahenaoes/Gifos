@@ -88,6 +88,8 @@ h6 {
 .navbar .menu-wrapper #toggle:checked ~ ul {
   height: 1145px;
   background-color: #572EE5;
+  margin: -14px;
+  margin-top: 35px;
 }
 
 .navbar .menu {
@@ -414,15 +416,6 @@ h6 {
   width: 50%;
 }
 
-@media (min-width: 600px) {
-  .containercarousel {
-    overflow: hidden;
-  }
-  .button {
-    display: block;
-  }
-}
-
 .footer {
   text-align: center;
   height: 196px;
@@ -458,5 +451,14 @@ h6 {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   line-height: 20px;
+}
+
+@media (min-width: 600px) {
+  .containercarousel {
+    overflow: hidden;
+  }
+  .button {
+    display: block;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
