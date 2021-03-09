@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./Styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="main.js"></script>
@@ -11,45 +11,77 @@
 
 </head>
 <body>
-    <!-- header -->
     <div class="pageContainer">
-    <div class="purpleRectangle"></div>
-    <div class="navBar">
-        <header class="Header">
-                <figure class="logo">
-                    <img src="./assets/logo-mobile.svg" alt="LogoMobile">
-                </figure>
-                <figure class="burger">
-                    <img src="./assets/burger.svg" alt="burgermobile">
-                </figure>
-                
+        <div class="purpleRectangle"></div>
+        <header>
+            <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                <a href="#"><img src="./assets/logo-mobile.svg" alt="GifosLogo"></a>
+                </div>
+                <nav class="menu-wrapper">
+                <input id="toggle" type="checkbox" class="checkbox-menu">
+                <label class="show-menu" id="show-menu" for="show-header-menu">
+                    <img src="./assets/burger.svg" class="burguer-menu" alt="menú hamburguesa">
+                    <img src="./assets/close.svg" class="close-menu" alt="cerrar menú">
+                </label>
+                <ul class="menu">
+                    <li><a class="nav-item" href="#nocturne">Modo Nocturno</a></li>
+                    <hr class="lineaMenu">
+                    <li><a class="nav-item" href="#favorites">Favoritos</a></li>
+                    <hr class="lineaMenu">
+                    <li><a class="nav-item" href="#gifs">Mis GIFOS</a>></li>
+                    <hr class="lineaMenu">
+                </ul>
+                </nav>
+            </div>
+            </div>
         </header>
-    </div>
+            </div>
+        <!-- </header> -->
     <section class="searchBoxMain">
         <div class="searchBox">
             <div class="tittleHome">
                 <h3>Inspírate, busca, guarda, y crea los mejores <span class="gifosWord"  style="color: #50E3C2;">GIFOS</span></h3>
             </div>
-                <ul class="menu-list">
-                    <li class="menu-list-item"><a class="link" href="#">Modo Nocturno</a></li>
-                    <li class="menu-list-item"><a class="link" href="#">Favoritos</a></li>
-                    <li class="menu-list-item"><a class="link" href="#">Mis GIFOS</a></li>
-                </ul>
             
     <!-- Main section home -->
-            <div class="imageTopSearch">
-                <img src="./assets/ilustra_header.svg" alt="ImagenSupBuscador">
-            </div>
-            <div class="searchBar">
-               <input type="text" placeholder="Busca GIFOS y más">
-            </div>
+    <div class="searchbox"> 
+        <div class="imageTopSearch">
+            <img src="./assets/ilustra_header.svg" alt="ImagenSupBuscador">
+        </div>
+        <div class="searchBar">
+            <input type="text" placeholder="Busca GIFOS y más">
+                <figure class="iconSearch">
+                <img src="/assets/icon-search.svg" alt="">
+                </figure>
+        </div>
+    </div>
             <h6>Trending:</h6>
             <div class="textDownBar">
                 <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
             </div>
         </div>
     </section>
-    
+    <section class="trendingSection">
+        <div class="titleSection">
+            <h2>Trending GIFOS</h2>
+        </div>
+        <div class="paragraph">
+            <p>Mira los últimos <br> GIFOS de nuestra comunidad</p>
+        </div>
+        <div class="card"></div>
+    </section>
+    <footer class="footer">
+        <p class="footerDescription">Compartir en:</p>
+        <div class="socialmedia">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="footerDescription">© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+    <div class="purpleRectangle"></div>
     </div>
 </body>
 </html>
