@@ -272,7 +272,7 @@ h6 {
 .trendingSection {
   height: 430px;
   background-color: #F3F5F8;
-  margin-top: 46px;
+  padding-top: 46px;
 }
 
 .trendingSection .titleSection h2 {
@@ -298,11 +298,129 @@ h6 {
   font-size: 16px;
 }
 
-.trendingSection .card {
+.containercarousel {
+  position: relative;
+  margin-left: 22px;
+  height: 181px;
+  background-color: transparent;
+  overflow: scroll;
+}
+
+.containercarousel::-webkit-scrollbar {
+  display: none;
+}
+
+.containercarousel .boxes-container {
+  position: absolute;
+  height: 187px;
+  white-space: nowrap;
+  background-color: transparent;
+}
+
+.containercarousel .boxes-container .gifos {
+  margin-right: 20px;
+  display: inline-block;
   width: 243px;
   height: 187px;
-  background-color: black;
-  margin: 0px 22px 82px;
+  background-image: url(https://media1.giphy.com/media/dno7UNcyXQIQNhB8Mi/200.gif);
+}
+
+.button {
+  display: none;
+}
+
+.hoverOptions {
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 41%;
+  left: 33%;
+  -webkit-transform: translate(-33%, -41%);
+          transform: translate(-33%, -41%);
+  text-align: end;
+  width: 244px;
+  height: 188px;
+}
+
+.hoverOptions .optionsGif {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.hoverOptions .favs img, .hoverOptions .max img, .hoverOptions .down img {
+  border-radius: 6px;
+}
+
+.hoverOptions .favs, .hoverOptions .max, .hoverOptions .down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+.hoverOptions .favs .btnHover, .hoverOptions .max .btnHover, .hoverOptions .down .btnHover {
+  display: none;
+}
+
+.hoverOptions .favs:hover .normal, .hoverOptions .max:hover .normal, .hoverOptions .down:hover .normal {
+  display: none;
+}
+
+.hoverOptions .favs:hover .btnHover, .hoverOptions .max:hover .btnHover, .hoverOptions .down:hover .btnHover {
+  display: inline-block;
+}
+
+.gifos:hover .hoverOptions {
+  opacity: 0.7;
+  background-color: #572EE5;
+}
+
+.textGif {
+  color: #FFFFFF;
+  background: transparent;
+  font-family: Roboto-Regular;
+  text-align: left;
+  margin: 90px 0px 0px 12px;
+}
+
+.textGif p {
+  margin: 0;
+}
+
+.textGif .user {
+  font-size: 15px;
+  background: transparent;
+  height: 17px;
+  margin-bottom: 5px;
+}
+
+.textGif .titleGif {
+  height: 40px;
+  background: transparent;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.gifos {
+  position: relative;
+  width: 50%;
+}
+
+@media (min-width: 600px) {
+  .containercarousel {
+    overflow: hidden;
+  }
+  .button {
+    display: block;
+  }
 }
 
 .footer {
@@ -319,7 +437,7 @@ h6 {
   letter-spacing: 0;
 }
 
-.footer .socialmedia {
+.footer .socialMedia {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,7 +448,7 @@ h6 {
   height: 20px;
 }
 
-.footer .socialmedia i {
+.footer i {
   color: #CDD6E0;
   font-size: 20px;
   margin-right: 19px;
