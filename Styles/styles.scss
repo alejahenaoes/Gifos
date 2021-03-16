@@ -1,6 +1,5 @@
 @import 'variable.scss';
 
-
 *{
   box-sizing: border-box;
   margin: 0;
@@ -20,22 +19,22 @@ a{
   cursor: pointer;
 }
 
-h3 {
-  font-family: $MonsBold;
-  font-size: 25px;
-  margin: 30px;
-  font-weight: normal;
-  line-height: 42px;
-  letter-spacing: 0;
-  color: $purpleMain;
-  text-align: center;
-}
 
 h6 {
   font-family: $MonsBold;
   font-size: 16px;
   margin: 31px 31px 0px 31px;
   font-weight: 900;
+  line-height: 42px;
+  letter-spacing: 0;
+  color: $purpleMain;
+  text-align: center;
+}
+h3 {
+  font-family: $MonsBold;
+  font-size: 25px;
+  margin: 30px;
+  font-weight: normal;
   line-height: 42px;
   letter-spacing: 0;
   color: $purpleMain;
@@ -55,78 +54,81 @@ h6 {
     position: relative;
     width: 48px;
     height: 48px;
-  }
-    .menu-wrapper {
-      display: block;
-      padding: 16px 0 16px 0;
-      #toggle {
-        display: block;
-        position: absolute;
-        align-items: center;
-        opacity: 0;
-        width: 20px;
-        height: 20px;
-        padding: 16px 5.9375% 16px 0;
-        z-index: 2;
-      }
-      #toggle:checked~ul {
-        height: 1145px;
-        background-color: $purpleMain;
-        margin: -14px;
-        margin-top: 35px;
-      }
-    }
-    .menu {
-      background-color: $purpleMain;
-      opacity: 0.9;
-      width: 375px;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      margin-top: 40px;
-      height: 0px;
-      right: 0;
-      list-style: none;
-      overflow: hidden;
-      align-items: center;
-        li {
-          height: 60px;
-          width: 375px;
-          background-color: $purpleMain;
-          margin: 16px 0 8px 16px;
-          .nav-item {
-            background-color: $purpleMain;
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            letter-spacing: 0;
-            line-height: 60px;
-            font-size: 15px;
-          }
-          .lineaMenu {
-            justify-content: center;
-            width: 41px;
-            height: 0.1px;
-          }
-        }
-    }
-    .checkbox-menu{
+    .logo-desktop {
       display: none;
-      &:checked{
-          ~.menu {
-              display: flex;
-          }
-          ~.show-menu{
-              .burguer-menu{
-                  display: none;
-              }
-              .close-menu{
-                  display: block;
-              }
-          }
+    }
+  }
+  .menu-wrapper {
+    display: block;
+    padding: 16px 0 16px 0;
+    #toggle {
+      display: block;
+      position: absolute;
+      align-items: center;
+      opacity: 0;
+      width: 20px;
+      height: 20px;
+      padding: 16px 5.9375% 16px 0;
+      z-index: 2;
+    }
+    #toggle:checked~ul {
+      height: 1145px;
+      background-color: $purpleMain;
+      margin: -14px;
+      margin-top: 35px;
+    }
+  }
+  .menu {
+    background-color: $purpleMain;
+    opacity: 0.9;
+    width: 375px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 0px;
+    right: 0;
+    list-style: none;
+    overflow: hidden;
+    align-items: center;
+    li {
+      height: 60px;
+      width: 375px;
+      background-color: $purpleMain;
+      margin: 16px 0 8px 16px;
+      .nav-item {
+        background-color: $purpleMain;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        letter-spacing: 0;
+        line-height: 60px;
+        font-size: 15px;
+      }
+      .lineaMenu {
+        justify-content: center;
+        width: 41px;
+        height: 0.1px;
+      }
+    }
+  }
+  .checkbox-menu{
+    display: none;
+    &:checked{
+      ~.menu {
+        display: flex;
+      }
+      ~.show-menu{
+        .burguer-menu{
+          display: none;
+        }
+        .close-menu{
+          display: block;
+        }
+      }
       }
   }
   .show-menu{
@@ -148,7 +150,7 @@ h6 {
 
 .tittleHome {
     font-family: $MonsBold;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: normal;
   line-height: 33px;
   letter-spacing: 0;
@@ -169,7 +171,7 @@ h6 {
 .purpleRectangle {
 display: flex;
 position: relative;
-width: 100%;
+width: 100vw;
 height: 5px;
 background-color: $purpleMain;
 }
@@ -179,36 +181,42 @@ background-color: $purpleMain;
   height: 0.1px;
 }
 
+.searchbox {
+  align-items: center;
 
-.imageTopSearch {
-  display: flex;
-  width: 273px;
-  height: 130px;
-  margin-right: 50px;
-  margin-left: 50px;
-  justify-content: center;
-}
-
-.searchBar {
-  width: 334px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  margin: 0.5px 1rem; 
-  width: 90%;
-  border: 1px solid $purpleMain;
-  border-radius: 27px;
-}
-  .iconSearch {
-    height: 20px;
-    width: 20px;
+  .imageTopSearch {
+    position: relative;
     display: flex;
-    position: absolute;
-    margin: 15px 20px 15px 20em;
+    width: 273px;
+    height: 130px;
+    margin-left: 13%;
+    margin-right: 13%;
+    justify-content: center;
   }
 
+  .searchBar {
+    width: 334px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 0.5px 1rem; 
+    width: 90%;
+    border: 1px solid $purpleMain;
+    border-radius: 27px;
+  }
+    .iconSearch {
+      height: 20px;
+      width: 20px;
+      display: flex;
+      position: absolute;
+      margin: 15px 20px 15px 20em;
+    }
+ }
 .textDownBar {
-  width: 225px;
+  p {
+
+  
+  width: 200px;
   height: 50px;
   margin: 0 auto;
   margin-bottom: 45px;
@@ -220,6 +228,7 @@ background-color: $purpleMain;
   letter-spacing: 0;
   color: $purpleMain;
   text-align: center;
+  }
 }
 
 //Trending
@@ -349,45 +358,276 @@ background-color: $purpleMain;
   width: 50%;
 }
 
-.footer{
-  text-align: center;
-  height: 196px;
-  width: 100%;
-  padding-top: 47px;
-  margin: auto;
-  p{
-      font-family: $robotoReg;
-      font-size: 15px;
-      letter-spacing: 0;
+// 
+  // footer
+  .footer{
+    text-align: center;
+    height: 196px;
+    width: 100%;
+    padding-top: 47px;
+    margin: auto;
+    p{
+        font-family: $robotoReg;
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+    .socialMedia{
+        display: flex;
+        justify-content: center;
+        padding: 24px 0px 47.8px 0px;
+        height: 20px;
+    }
+    i{
+        color: #CDD6E0;
+        font-size: 20px;
+        margin-right: 19px;
+    }
+    .footerDescription{
+        font-family: $robotoReg;
+        font-size: 15px;
+        line-height: 20px;
+    }
   }
-  .socialMedia{
-      display: flex;
-      justify-content: center;
-      padding: 24px 0px 47.8px 0px;
-      height: 20px;
-  }
-  i{
-      color: #CDD6E0;
-      font-size: 20px;
-      margin-right: 19px;
-  }
-  .footerDescription{
-      font-family: $robotoReg;
-      font-size: 15px;
-      line-height: 20px;
-  }
-}
+
 //media querys
-@media (min-width: 600px){
+@media (min-width: 768px){
   .containercarousel{
       overflow: hidden;
   }
   .button{
       display: block;
   }
+  .searchbox {
+    align-items: center;
+  
+    .imageTopSearch {
+      margin-left: 250px;
+    }
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
+  .tittleHome {
+  font-family: $MonsBold;
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 33px;
+  margin: 60px 4px;;
+  letter-spacing: 0;
+  color: $purpleMain;
+  text-align: center;
+    .gifosWord {
+    line-height: 42px;
+    }
+  }
 
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 41px 14px 0px 22px;
+    height: 49px;
+    z-index: 100;
+    position: relative;
+    
+    .logo {
+      margin: -20px 0px 0px 156px;
+      
+      .logo-mobile{
+        display: none;
+      }
+      .logo-desktop {
+        display: flex;
+        position: relative;
+        width: 59.1px;
+        height: 59.1px;
+      }
+    }
+    
+    .menu {
+      background-color: $purpleMain;
+      opacity: 0.9;
+      width: 375px;
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      margin-top: 40px;
+      height: 0px;
+      right: 0;
+      list-style: none;
+      overflow: hidden;
+      align-items: center;
+      li {
+        height: 60px;
+        width: 375px;
+        background-color: $purpleMain;
+        margin: 16px 0 8px 16px;
+        .nav-item {
+          background-color: $purpleMain;
+          text-decoration: none;
+          color: white;
+          font-size: 16px;
+          display: flex;
+          justify-content: center;
+          position: relative;
+          letter-spacing: 0;
+          line-height: 60px;
+          font-size: 15px;
+        }
+        .lineaMenu {
+          justify-content: center;
+          width: 41px;
+          height: 0.1px;
+        }
+      }
+    }
+    .checkbox-menu{
+      display: none;
+      &:checked{
+        ~.menu {
+          display: flex;
+        }
+        ~.show-menu{
+          .burguer-menu{
+            display: none;
+          }
+          .close-menu{
+            display: block;
+          }
+        }
+      }
+    }
+    .show-menu{
+      margin: 47px 27px 34px 0;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      .burguer-menu{
+        width: 100%;
+        height: 100%;
+      }
+      .close-menu{
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+    }
+  }
+    .tittleHome { 
+      margin: 80px 400px;
+      h3 {
+        font-family: $MonsBold;
+        font-size: 35px;
+        font-weight: normal;
+        line-height: 33px;
+        letter-spacing: 0;
+        color: $purpleMain;
+        text-align: center;
+      }
+      
+      .gifosWord {
+        font-family: $MonsBold;
+        font-size: 35px;
+        padding: 0px;
+        font-weight: normal;
+        line-height: 42px;
+        letter-spacing: 0;
+        color: $purpleMain;
+        text-align: center;
+      }
+  }
+  .purpleRectangle {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: $purpleMain;
+  }
+  
+  .lineaMenu {
+    width: 41px;
+    height: 0.1px;
+  }
+    .searchbox {
+      padding-bottom: 73px;
+
+    .imageTopSearch {
+      display: flex;
+      width: 399px;
+      height: 190px;
+      justify-content: center;
+      margin-left: 120px;
+    }
+    }
+    .searchBar {
+      width: 334px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      margin: 0.5px 1rem; 
+      width: 90%;
+      border: 1px solid $purpleMain;
+      border-radius: 27px;
+      
+    }
+    .lupa {
+      height: 20px;
+      width: 20px;
+      display: flex;
+      position: absolute;
+      margin: 0px 20px 15px 8em;
+    }
+    
+    .textDownBar {
+      p {
+  
+        
+        width: 400px;
+        height: 50px;
+        margin: 0 auto;
+        margin-bottom: 45px;
+        font-family: $MonsBold;
+        font-size: 15px;
+        padding: 2px;
+        font-weight: 100;
+        line-height: 25px;
+        letter-spacing: 0;
+        color: $purpleMain;
+        text-align: center;
+      }
+    }
+    
+    // footer
+    .footer{
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      height: 216px;
+      width: 100%;
+      padding-top: 47px;
+      margin: auto;
+      
+      p{
+        font-family: $robotoReg;
+        font-size: 13px;
+        letter-spacing: 0;
+        margin-left: 156px;
+        margin-right: 35px;
+      }
+      .socialMedia{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 20px;
+        padding-right: 550px;
+      #twitter {
+        color: $purpleMain;
+      }
+      .footerDescription{
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
 }
-

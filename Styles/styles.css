@@ -19,22 +19,22 @@ a {
   cursor: pointer;
 }
 
-h3 {
+h6 {
   font-family: "Montserrat", sans-serif;
-  font-size: 25px;
-  margin: 30px;
-  font-weight: normal;
+  font-size: 16px;
+  margin: 31px 31px 0px 31px;
+  font-weight: 900;
   line-height: 42px;
   letter-spacing: 0;
   color: #572EE5;
   text-align: center;
 }
 
-h6 {
+h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  margin: 31px 31px 0px 31px;
-  font-weight: 900;
+  font-size: 25px;
+  margin: 30px;
+  font-weight: normal;
   line-height: 42px;
   letter-spacing: 0;
   color: #572EE5;
@@ -65,6 +65,10 @@ h6 {
   position: relative;
   width: 48px;
   height: 48px;
+}
+
+.navbar .logo .logo-desktop {
+  display: none;
 }
 
 .navbar .menu-wrapper {
@@ -184,7 +188,7 @@ h6 {
 
 .tittleHome {
   font-family: "Montserrat", sans-serif;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: normal;
   line-height: 33px;
   letter-spacing: 0;
@@ -208,7 +212,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 5px;
   background-color: #572EE5;
 }
@@ -218,20 +222,27 @@ h6 {
   height: 0.1px;
 }
 
-.imageTopSearch {
+.searchbox {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchbox .imageTopSearch {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 273px;
   height: 130px;
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-left: 13%;
+  margin-right: 13%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.searchBar {
+.searchbox .searchBar {
   width: 334px;
   height: 50px;
   display: -webkit-box;
@@ -246,7 +257,7 @@ h6 {
   border-radius: 27px;
 }
 
-.iconSearch {
+.searchbox .iconSearch {
   height: 20px;
   width: 20px;
   display: -webkit-box;
@@ -256,8 +267,8 @@ h6 {
   margin: 15px 20px 15px 20em;
 }
 
-.textDownBar {
-  width: 225px;
+.textDownBar p {
+  width: 200px;
   height: 50px;
   margin: 0 auto;
   margin-bottom: 45px;
@@ -453,12 +464,278 @@ h6 {
   line-height: 20px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .containercarousel {
     overflow: hidden;
   }
   .button {
     display: block;
+  }
+  .searchbox {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .searchbox .imageTopSearch {
+    margin-left: 250px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .tittleHome {
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+    font-weight: normal;
+    line-height: 33px;
+    margin: 60px 4px;
+    letter-spacing: 0;
+    color: #572EE5;
+    text-align: center;
+  }
+  .tittleHome .gifosWord {
+    line-height: 42px;
+  }
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 41px 14px 0px 22px;
+    height: 49px;
+    z-index: 100;
+    position: relative;
+  }
+  .navbar .logo {
+    margin: -20px 0px 0px 156px;
+  }
+  .navbar .logo .logo-mobile {
+    display: none;
+  }
+  .navbar .logo .logo-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 59.1px;
+    height: 59.1px;
+  }
+  .navbar .menu {
+    background-color: #572EE5;
+    opacity: 0.9;
+    width: 375px;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 40px;
+    height: 0px;
+    right: 0;
+    list-style: none;
+    overflow: hidden;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .menu li {
+    height: 60px;
+    width: 375px;
+    background-color: #572EE5;
+    margin: 16px 0 8px 16px;
+  }
+  .navbar .menu li .nav-item {
+    background-color: #572EE5;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    letter-spacing: 0;
+    line-height: 60px;
+    font-size: 15px;
+  }
+  .navbar .menu li .lineaMenu {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 41px;
+    height: 0.1px;
+  }
+  .navbar .checkbox-menu {
+    display: none;
+  }
+  .navbar .checkbox-menu:checked ~ .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar .checkbox-menu:checked ~ .show-menu .burguer-menu {
+    display: none;
+  }
+  .navbar .checkbox-menu:checked ~ .show-menu .close-menu {
+    display: block;
+  }
+  .navbar .show-menu {
+    margin: 47px 27px 34px 0;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+  .navbar .show-menu .burguer-menu {
+    width: 100%;
+    height: 100%;
+  }
+  .navbar .show-menu .close-menu {
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .tittleHome {
+    margin: 80px 400px;
+  }
+  .tittleHome h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+    font-weight: normal;
+    line-height: 33px;
+    letter-spacing: 0;
+    color: #572EE5;
+    text-align: center;
+  }
+  .tittleHome .gifosWord {
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+    padding: 0px;
+    font-weight: normal;
+    line-height: 42px;
+    letter-spacing: 0;
+    color: #572EE5;
+    text-align: center;
+  }
+  .purpleRectangle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #572EE5;
+  }
+  .lineaMenu {
+    width: 41px;
+    height: 0.1px;
+  }
+  .searchbox {
+    padding-bottom: 73px;
+  }
+  .searchbox .imageTopSearch {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 399px;
+    height: 190px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 120px;
+  }
+  .searchBar {
+    width: 334px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0.5px 1rem;
+    width: 90%;
+    border: 1px solid #572EE5;
+    border-radius: 27px;
+  }
+  .lupa {
+    height: 20px;
+    width: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    margin: 0px 20px 15px 8em;
+  }
+  .textDownBar p {
+    width: 400px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    padding: 2px;
+    font-weight: 100;
+    line-height: 25px;
+    letter-spacing: 0;
+    color: #572EE5;
+    text-align: center;
+  }
+  .footer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: center;
+    height: 216px;
+    width: 100%;
+    padding-top: 47px;
+    margin: auto;
+  }
+  .footer p {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0;
+    margin-left: 156px;
+    margin-right: 35px;
+  }
+  .footer .socialMedia {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 20px;
+    padding-right: 550px;
+  }
+  .footer .socialMedia #twitter {
+    color: #572EE5;
+  }
+  .footer .socialMedia .footerDescription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 /*# sourceMappingURL=styles.css.map */
