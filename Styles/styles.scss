@@ -19,27 +19,6 @@ a{
   cursor: pointer;
 }
 
-h3 {
-  font-family: $MonsBold;
-  font-size: 25px;
-  margin: 30px;
-  font-weight: normal;
-  line-height: 42px;
-  letter-spacing: 0;
-  color: $purpleMain;
-  text-align: center;
-}
-
-h6 {
-  font-family: $MonsBold;
-  font-size: 16px;
-  margin: 31px 31px 0px 31px;
-  font-weight: 900;
-  line-height: 42px;
-  letter-spacing: 0;
-  color: $purpleMain;
-  text-align: center;
-}
 
 .navbar {
   display: flex;
@@ -54,78 +33,81 @@ h6 {
     position: relative;
     width: 48px;
     height: 48px;
-  }
-    .menu-wrapper {
-      display: block;
-      padding: 16px 0 16px 0;
-      #toggle {
-        display: block;
-        position: absolute;
-        align-items: center;
-        opacity: 0;
-        width: 20px;
-        height: 20px;
-        padding: 16px 5.9375% 16px 0;
-        z-index: 2;
-      }
-      #toggle:checked~ul {
-        height: 1145px;
-        background-color: $purpleMain;
-        margin: -14px;
-        margin-top: 35px;
-      }
-    }
-    .menu {
-      background-color: $purpleMain;
-      opacity: 0.9;
-      width: 375px;
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      margin-top: 40px;
-      height: 0px;
-      right: 0;
-      list-style: none;
-      overflow: hidden;
-      align-items: center;
-        li {
-          height: 60px;
-          width: 375px;
-          background-color: $purpleMain;
-          margin: 16px 0 8px 16px;
-          .nav-item {
-            background-color: $purpleMain;
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            letter-spacing: 0;
-            line-height: 60px;
-            font-size: 15px;
-          }
-          .lineaMenu {
-            justify-content: center;
-            width: 41px;
-            height: 0.1px;
-          }
-        }
-    }
-    .checkbox-menu{
+    .logo-desktop {
       display: none;
-      &:checked{
-          ~.menu {
-              display: flex;
-          }
-          ~.show-menu{
-              .burguer-menu{
-                  display: none;
-              }
-              .close-menu{
-                  display: block;
-              }
-          }
+    }
+  }
+  .menu-wrapper {
+    display: block;
+    padding: 16px 0 16px 0;
+    #toggle {
+      display: block;
+      position: absolute;
+      align-items: center;
+      opacity: 0;
+      width: 20px;
+      height: 20px;
+      padding: 16px 5.9375% 16px 0;
+      z-index: 2;
+    }
+    #toggle:checked~ul {
+      height: 1145px;
+      background-color: $purpleMain;
+      margin: -14px;
+      margin-top: 35px;
+    }
+  }
+  .menu {
+    background-color: $purpleMain;
+    opacity: 0.9;
+    width: 375px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    height: 0px;
+    right: 0;
+    list-style: none;
+    overflow: hidden;
+    align-items: center;
+    li {
+      height: 60px;
+      width: 375px;
+      background-color: $purpleMain;
+      margin: 16px 0 8px 16px;
+      .nav-item {
+        background-color: $purpleMain;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        letter-spacing: 0;
+        line-height: 60px;
+        font-size: 15px;
+      }
+      .lineaMenu {
+        justify-content: center;
+        width: 41px;
+        height: 0.1px;
+      }
+    }
+  }
+  .checkbox-menu{
+    display: none;
+    &:checked{
+      ~.menu {
+        display: flex;
+      }
+      ~.show-menu{
+        .burguer-menu{
+          display: none;
+        }
+        .close-menu{
+          display: block;
+        }
+      }
       }
   }
   .show-menu{
@@ -145,30 +127,26 @@ h6 {
 }
 }
 
-.tittleHome {
-    font-family: $MonsBold;
+.tittleHome h3{
+  font-family: $MonsBold;
   font-size: 25px;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 33px;
   letter-spacing: 0;
   color: $purpleMain;
   text-align: center;
+  margin: 25px 45px 31px;
+  .gifosWord {
+    padding: 0px;
+    font-size: 25px;
+    text-align: center;
+  }
   }
 
-.gifosWord {
-  font-family: $MonsBold;
-  font-size: 25px;
-  padding: 0px;
-  font-weight: normal;
-  line-height: 42px;
-  letter-spacing: 0;
-  color: $purpleMain;
-  text-align: center;
-}
 .purpleRectangle {
 display: flex;
 position: relative;
-width: 100%;
+width: 100vw;
 height: 5px;
 background-color: $purpleMain;
 }
@@ -204,21 +182,27 @@ background-color: $purpleMain;
     position: absolute;
     margin: 14px 16px 15px 292px;
   }
-
-.textDownBar {
-  width: 225px;
-  height: 50px;
-  margin: 0 auto;
-  margin-bottom: 45px;
+h6 {
   font-family: $MonsBold;
-  font-size: 14px;
-  padding: 2px;
-  font-weight: 100;
+  font-size: 16px;
+  margin-top: 31px;
+  font-weight: bold;
   line-height: 25px;
-  letter-spacing: 0;
   color: $purpleMain;
   text-align: center;
 }
+.textDownBar {
+  width: 225px;
+  height: 50px;
+  font-family: $MonsBold;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  color: $purpleMain;
+  text-align: center;
+  margin: 2px auto 45px auto;
+  }
+
 
 //Trending
 .trendingSection{
@@ -349,43 +333,56 @@ background-color: $purpleMain;
   display: none;
 }
 
-.footer{
-  text-align: center;
-  height: 196px;
-  width: 100%;
-  padding-top: 47px;
-  margin: auto;
-  p{
-      font-family: $robotoReg;
-      font-size: 15px;
-      letter-spacing: 0;
+  // footer
+  .footer{
+    text-align: center;
+    height: 196px;
+    // width: 100%;
+    padding-top: 47px;
+    margin: auto;
+    div{
+        font-family: $robotoReg;
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+    .socialMedia{
+        display: flex;
+        justify-content: center;
+        padding: 24px 0px 47.8px 0px;
+        height: 20px;
+        .iconNormal{
+            margin-right: 19px;
+        }
+      }
+        .footerDescription{
+          font-family: $robotoReg;
+          font-size: 15px;
+          line-height: 20px;
+        }
   }
-  .socialMedia{
-      display: flex;
-      justify-content: center;
-      padding: 24px 0px 47.8px 0px;
-      height: 20px;
-  }
-  i{
-      color: #CDD6E0;
-      font-size: 20px;
-      margin-right: 19px;
-  }
-  .footerDescription{
-      font-family: $robotoReg;
-      font-size: 15px;
-      line-height: 20px;
-  }
-}
+
 //media querys
 
 @media (min-width: 768px) {
+  .navbar{
+    .logo{
+      height: 60px;
+      position: relative;
+      margin-left:134px;
+      .logo-desktop {
+        display: block;
+      }
+      .logo-mobile{
+        display: none;
+      }
+    }
+  }
   .imageTopSearch {
     display: flex;
     width: 399px;
     height: 190px;
     justify-content: center;
-    margin: auto;
+    margin-top: 24px;
   }
   .iconSearch {
     margin: 14px 16px 15px 511px;
@@ -397,12 +394,26 @@ background-color: $purpleMain;
         width: 450px;
       }
   }
+  .tittleHome h3{
+    font-size: 35px;
+    font-weight: bold;
+    width: 600px;
+    margin: 76px auto 0px auto;
+    line-height: 50px;
+    .gifosWord {
+      font-size: 35px;
+      line-height: 50px;
+    }
+  }
+  .textDownBar {
+    width: 402px;
+    font-size: 16px;
+    margin: 7px auto 95px auto;
+    height: 25px;
+  }
   .containercarousel{
     overflow: hidden;
     display: flex;
-  }
-  .button{
-      display: inline-block;
   }
   .trendingSection{
     height: 640px;
@@ -413,22 +424,27 @@ background-color: $purpleMain;
     .paragraph p{
         margin: 12px 0px 11.5px 0px;
         font-size: 18px;
+        br {
+          display: none;
+        }
     }
+  }
+  .button{
+    display: inline-block;
   }
   .button-right{
     display: flex;
     justify-content: flex-end;
     background-color: transparent;
     transform: translate(-96px, -186px);
+    }
   }
   .button-left {
     height: 0;
     z-index: 1;
     position: absolute;
-    img{
-      background-color: transparent;
-      padding: 172px 94px;
-    }
+    background-color: transparent;
+    padding: 172px 94px;
   }
     .containercarousel{
       margin: 0px 156px;
@@ -458,5 +474,27 @@ background-color: $purpleMain;
         }
     }
 }
-
+//footer
+.footer{
+  display: flex;
+  flex-direction: row;
+  height: 116px;
+  justify-content: space-between;
+  p{
+    font-size: 13px;
+  }
+  .socialMedia{
+    padding: 0;
+    transform: translateY(-10px);
+  }
+  .footerDescription1{
+    display: flex;
+    gap: 17px;
+    margin-left: 156px;
+  }
+  .footerDescription2{
+    justify-content: space-around;
+    margin-right: 158px;
+  }
 }
+

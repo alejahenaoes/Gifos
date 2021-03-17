@@ -19,7 +19,7 @@ for(let i=0; i<numGifosSlider; i++){
 window.onload = function(){
     boxesContainer[0].removeChild(gifo[0]);
 }
-//Desktop
+
 buttonLeft.addEventListener("click", () =>{
     if(positionGifs[0] < 0){
         slideFunction(distance);
@@ -60,3 +60,23 @@ let gifTrendingImg = document.getElementsByClassName("imgGif");
                 userGif[i].textContent = userGifo;
             }console.log(gifo_response)
         }).catch(message_error => console.log(message_error));
+
+//Topics para trending
+let urlTopicsTrending = "https://api.giphy.com/v1/trending/searches?"+ apiKey;
+let ctnTrendingTopic = document.getElementsByClassName("textDownBar")[0];
+fetch(urlTopicsTrending)
+        .then(response => response.json())
+        .then(topicResponse => {
+            for (let i=0; i < 5; i++){
+                let topics= capitalize(topicResponse.data[i])
+
+                function capitalize(topic){
+                            return topic.charAt(0).toUpperCase()+ topic.slice(1)
+                        }
+                if( i<4 ){
+                        ctnTrendingTopic.innerHTML+= topics+', '
+                    } else {
+                        ctnTrendingTopic.innerHTML+= topics
+                    }
+                    }
+        })

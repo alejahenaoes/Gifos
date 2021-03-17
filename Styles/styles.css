@@ -1,3 +1,7 @@
+.apiSearchResults {
+  display: none;
+}
+
 .titleSearch {
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
@@ -35,28 +39,6 @@ a {
   cursor: pointer;
 }
 
-h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 25px;
-  margin: 30px;
-  font-weight: normal;
-  line-height: 42px;
-  letter-spacing: 0;
-  color: #572EE5;
-  text-align: center;
-}
-
-h6 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  margin: 31px 31px 0px 31px;
-  font-weight: 900;
-  line-height: 42px;
-  letter-spacing: 0;
-  color: #572EE5;
-  text-align: center;
-}
-
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,6 +63,10 @@ h6 {
   position: relative;
   width: 48px;
   height: 48px;
+}
+
+.navbar .logo .logo-desktop {
+  display: none;
 }
 
 .navbar .menu-wrapper {
@@ -198,24 +184,20 @@ h6 {
   display: none;
 }
 
-.tittleHome {
+.tittleHome h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 33px;
   letter-spacing: 0;
   color: #572EE5;
   text-align: center;
+  margin: 25px 45px 31px;
 }
 
-.gifosWord {
-  font-family: "Montserrat", sans-serif;
-  font-size: 25px;
+.tittleHome h3 .gifosWord {
   padding: 0px;
-  font-weight: normal;
-  line-height: 42px;
-  letter-spacing: 0;
-  color: #572EE5;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -224,7 +206,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 5px;
   background-color: #572EE5;
 }
@@ -273,19 +255,26 @@ h6 {
   margin: 14px 16px 15px 292px;
 }
 
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin-top: 31px;
+  font-weight: bold;
+  line-height: 25px;
+  color: #572EE5;
+  text-align: center;
+}
+
 .textDownBar {
   width: 225px;
   height: 50px;
-  margin: 0 auto;
-  margin-bottom: 45px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  padding: 2px;
-  font-weight: 100;
+  font-weight: 500;
   line-height: 25px;
-  letter-spacing: 0;
   color: #572EE5;
   text-align: center;
+  margin: 2px auto 45px auto;
 }
 
 .trendingSection {
@@ -441,12 +430,11 @@ h6 {
 .footer {
   text-align: center;
   height: 196px;
-  width: 100%;
   padding-top: 47px;
   margin: auto;
 }
 
-.footer p {
+.footer div {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   letter-spacing: 0;
@@ -463,9 +451,7 @@ h6 {
   height: 20px;
 }
 
-.footer i {
-  color: #CDD6E0;
-  font-size: 20px;
+.footer .socialMedia .iconNormal {
   margin-right: 19px;
 }
 
@@ -476,6 +462,17 @@ h6 {
 }
 
 @media (min-width: 768px) {
+  .navbar .logo {
+    height: 60px;
+    position: relative;
+    margin-left: 134px;
+  }
+  .navbar .logo .logo-desktop {
+    display: block;
+  }
+  .navbar .logo .logo-mobile {
+    display: none;
+  }
   .imageTopSearch {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -485,7 +482,7 @@ h6 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: auto;
+    margin-top: 24px;
   }
   .iconSearch {
     margin: 14px 16px 15px 511px;
@@ -497,14 +494,28 @@ h6 {
   .searchBar input {
     width: 450px;
   }
+  .tittleHome h3 {
+    font-size: 35px;
+    font-weight: bold;
+    width: 600px;
+    margin: 76px auto 0px auto;
+    line-height: 50px;
+  }
+  .tittleHome h3 .gifosWord {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .textDownBar {
+    width: 402px;
+    font-size: 16px;
+    margin: 7px auto 95px auto;
+    height: 25px;
+  }
   .containercarousel {
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .button {
-    display: inline-block;
   }
   .trendingSection {
     height: 640px;
@@ -517,6 +528,12 @@ h6 {
     margin: 12px 0px 11.5px 0px;
     font-size: 18px;
   }
+  .trendingSection .paragraph p br {
+    display: none;
+  }
+  .button {
+    display: inline-block;
+  }
   .button-right {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -528,47 +545,90 @@ h6 {
     -webkit-transform: translate(-96px, -186px);
             transform: translate(-96px, -186px);
   }
-  .button-left {
-    height: 0;
-    z-index: 1;
-    position: absolute;
-  }
-  .button-left img {
-    background-color: transparent;
-    padding: 172px 94px;
-  }
-  .containercarousel {
-    margin: 0px 156px;
-    height: 358px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .containercarousel .boxes-container {
-    width: 357px;
-    height: 275px;
-    -webkit-transform: translate(-18px);
-            transform: translate(-18px);
-    overflow-y: visible;
-  }
-  .containercarousel .boxes-container .gifos {
-    width: 357px;
-    height: 275px;
-    margin: 0px 14.5px 0px 14.5px;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-  .hoverOptions {
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translate(0px, -276px);
-            transform: translate(0px, -276px);
-  }
-  .hoverOptions .textGif {
-    margin: 163px 0px 0px 12px;
-  }
-  .hoverOptions .textGif p {
-    margin: 0;
-  }
+}
+
+.button-left {
+  height: 0;
+  z-index: 1;
+  position: absolute;
+  background-color: transparent;
+  padding: 172px 94px;
+}
+
+.containercarousel {
+  margin: 0px 156px;
+  height: 358px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containercarousel .boxes-container {
+  width: 357px;
+  height: 275px;
+  -webkit-transform: translate(-18px);
+          transform: translate(-18px);
+  overflow-y: visible;
+}
+
+.containercarousel .boxes-container .gifos {
+  width: 357px;
+  height: 275px;
+  margin: 0px 14.5px 0px 14.5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hoverOptions {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(0px, -276px);
+          transform: translate(0px, -276px);
+}
+
+.hoverOptions .textGif {
+  margin: 163px 0px 0px 12px;
+}
+
+.hoverOptions .textGif p {
+  margin: 0;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 116px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer p {
+  font-size: 13px;
+}
+
+.footer .socialMedia {
+  padding: 0;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.footer .footerDescription1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 17px;
+  margin-left: 156px;
+}
+
+.footer .footerDescription2 {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 158px;
 }
 /*# sourceMappingURL=styles.css.map */
