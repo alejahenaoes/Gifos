@@ -340,6 +340,7 @@ h6 {
     // width: 100%;
     padding-top: 47px;
     margin: auto;
+    display: flex;
     div{
         font-family: $robotoReg;
         font-size: 15px;
@@ -438,63 +439,63 @@ h6 {
     background-color: transparent;
     transform: translate(-96px, -186px);
     }
-  }
-  .button-left {
-    height: 0;
-    z-index: 1;
-    position: absolute;
-    background-color: transparent;
-    padding: 172px 94px;
-  }
-    .containercarousel{
-      margin: 0px 156px;
-      height: 358px;
-      align-items: center;
-      .boxes-container{
-              width: 357px;
-              height: 275px;
-              transform: translate(-18px);
-              overflow-y: visible;
-          .gifos{
-              width: 357px;
-              height: 275px;
-              margin: 0px 14.5px 0px 14.5px;
-              transition: 0.5s;
+    .button-left {
+      height: 0;
+      z-index: 1;
+      position: absolute;
+      background-color: transparent;
+      padding: 172px 94px;
+    }
+      .containercarousel{
+        margin: 0px 156px;
+        height: 358px;
+        align-items: center;
+        .boxes-container{
+                width: 357px;
+                height: 275px;
+                transform: translate(-18px);
+                overflow-y: visible;
+            .gifos{
+                width: 357px;
+                height: 275px;
+                margin: 0px 14.5px 0px 14.5px;
+                transition: 0.5s;
+            }
+        }
+      }
+      .hoverOptions{
+        width: 100%;
+        height: 100%;
+        transform: translate(0px, -276px);
+        .textGif{
+          margin: 163px 0px 0px 12px;
+          p{
+              margin: 0;
           }
       }
-    }
-    .hoverOptions{
-      width: 100%;
-      height: 100%;
-      transform: translate(0px, -276px);
-      .textGif{
-        margin: 163px 0px 0px 12px;
-        p{
-            margin: 0;
-        }
-    }
-}
-//footer
-.footer{
-  display: flex;
-  flex-direction: row;
-  height: 116px;
-  justify-content: space-between;
-  p{
-    font-size: 13px;
   }
-  .socialMedia{
-    padding: 0;
-    transform: translateY(-10px);
-  }
-  .footerDescription1{
+  //footer
+  .footer{
     display: flex;
-    gap: 17px;
-    margin-left: 156px;
+    flex-direction: row;
+    height: 116px;
+    justify-content: space-between;
+    p{
+      font-size: 13px;
+    }
+    .socialMedia{
+      padding: 0;
+      transform: translateY(-10px);
+    }
+    .footerDescription1{
+      display: flex;
+      gap: 17px;
+      margin-left: 156px;
+    }
+    .footerDescription2{
+      justify-content: space-around;
+      margin-right: 158px;
+    }
   }
-  .footerDescription2{
-    justify-content: space-around;
-    margin-right: 158px;
   }
-}
 
