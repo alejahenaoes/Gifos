@@ -432,9 +432,6 @@ h6 {
   height: 196px;
   padding-top: 47px;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .footer div {
