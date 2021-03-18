@@ -49,37 +49,33 @@
         <div class="imageTopSearch">
             <img src="./assets/ilustra_header.svg" alt="ImagenSupBuscador">
         </div>
+    </div>
+        <!-- Barra de búsqueda -->
         <div class="searchBar">
             <input type="text" placeholder="Busca GIFOS y más" id="input" class="input">
                 <figure class="iconSearch">
                     <button onclick = "sendApiRequest()"><img src="assets/icon-search.svg" alt="lupa"></button>
                 </figure>
+                <figure class="active">
+                    <button class="iconSearchActive"><img src="assets/icon-search-modo-noct.svg" alt="active"></button>
+                    <button class="closeSearch"><img src="assets/close.svg" alt="close"></button>
+                </figure>
                 <div class="searchBoxAutocomplete">
                     <div class="optionSearch">
                         <div class="divider"></div>
                         <div class="sugerencias"></div>
-                        <!-- <ul id="box-search">
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                        </ul> -->
                     </div>
                 </div>
         </div>
-    </div>
+    
     <!-- La que no se ve -->
-    <div class="apiSearchResults" id="apiSearchResults">
+    <!-- <div class="apiSearchResults" id="apiSearchResults">
         <h2 class="titleSearch">Título Busqueda</h2>
         <div class="searchResults">
             <div class="gifosSearch" id="resultSearch"></div>
         </div>
         <img src="/assets/CTA-ver-mas.svg" alt="vermas" class="verMas">
-    </div>
+    </div> -->
             <h6>Trending:</h6>
             <div class="textDownBar">
                 <!-- <p>Reactions, Entertainment, Sports, Stickers, Artists</p> -->

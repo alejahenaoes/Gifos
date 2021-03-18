@@ -245,6 +245,9 @@ a {
 .searchBar input {
   outline: none;
   width: 215px;
+  position: absolute;
+  margin-top: 15px;
+  z-index: 2;
 }
 
 .iconSearch {
@@ -253,6 +256,20 @@ a {
   display: flex;
   position: absolute;
   margin: 14px 16px 15px 292px;
+}
+
+.active {
+  position: absolute;
+  z-index: 1;
+  width: 296px;
+  margin-top: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
 }
 
 h6 {
@@ -486,6 +503,10 @@ h6 {
   }
   .iconSearch {
     margin: 14px 16px 15px 511px;
+  }
+  .active {
+    width: 516px;
+    display: none;
   }
   .searchBar {
     width: 551px;

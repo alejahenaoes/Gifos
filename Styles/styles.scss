@@ -175,12 +175,24 @@ background-color: $purpleMain;
     input{
       outline: none;
       width: 215px;
+      position: absolute;
+      margin-top: 15px;
+      z-index: 2;
     }
 }
   .iconSearch {
     display: flex;
     position: absolute;
     margin: 14px 16px 15px 292px;
+  }
+  .active{
+    position: absolute;
+    z-index: 1;
+    width: 296px;
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+    display: none;
   }
 h6 {
   font-family: $MonsBold;
@@ -385,6 +397,10 @@ h6 {
   }
   .iconSearch {
     margin: 14px 16px 15px 511px;
+  }
+  .active{
+    width: 516px;
+    display: none; //con display flex se ve
   }
   .searchBar {
     width: 551px;
