@@ -41,6 +41,7 @@ searchBar[0].addEventListener("focus", () =>{
     activeSection[0].style.display = "flex";
     normalSection[0].style.display = "none";
 })
+//Limpieza SearchBar
 closeIcon[0].addEventListener("focus", () =>{
     activeSection[0].style.display = "none";
     normalSection[0].style.display = "block";
