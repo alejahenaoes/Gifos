@@ -1,5 +1,8 @@
 //const apiKey = "api_key=y9Vum3HsDR775RvR5yVqbdDQ155aMeRX";
 let suggestions = document.getElementsByClassName("searchBoxAutocomplete")
+let imgSearch = document.getElementsByClassName("gifsSearch")
+let titleSearch = document.getElementsByClassName("titleSearch")[0]
+let searchSpace = document.getElementsByClassName("gifosSearch")
 function sendApiRequest(){
     let userInput = document.getElementById("input").value
     console.log(userInput)
@@ -17,12 +20,15 @@ function sendApiRequest(){
     })
         .then(function(json){
                 for (let i=0; i < 12; i++){
-                    console.log(json.data[i].images.fixed_height.url)
+                    console.log(json.data[i].images.fixed_height.url)//trae 12 gifs
                     let imgPath = json.data[i].images.fixed_height.url
                     let img = document.createElement("img")
                     img.setAttribute("src", imgPath)
-                    // let container = document.getElementById("resultSearch")
-                    document.body.appendChild(img)
+                    imgSearch[i].appendChild(img) //pone img al ctn
+                    img.id="imgGifSearch"+i; //se lo pone a la imagen
+                    img.classList = "imgSearch"; //se lo pone a la imagen
+                    titleSearch.innerHTML = userInput;
+                    // document.body.appendChild(img)
                 }
             }).catch(function(){
                     alert("Busqueda inválida")
@@ -38,6 +44,7 @@ let closeIcon = document.getElementsByClassName("closeSearch")
 searchBar[0].addEventListener('keydown', (event) => {
     if (event.keyCode === 13) {
       sendApiRequest()
+      searchSpace[0].style.display = "inline-block"
     }
   });
   //Funcionalidad de barra activa
@@ -50,8 +57,10 @@ closeIcon[0].addEventListener("focus", () =>{
     activeSection[0].style.display = "none";
     normalSection[0].style.display = "block";
     let inputValue = document.getElementById("input").value = "";
+    searchSpace[0].style.display = "none"
 })
 
 const sugerencias = document.getElementsByClassName("sugerencias");
 
 let searchInput = document.getElementsByClassName("input")[0];
+

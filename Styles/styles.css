@@ -17,6 +17,10 @@
   border: 1px solid #9CAFC3;
 }
 
+.gifosSearch {
+  display: none;
+}
+
 .gifosSearch .titleSearch {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
@@ -24,17 +28,48 @@
   margin: 50px;
   line-height: 30px;
   text-align: center;
-}
-
-.gifosSearch .resultsGifosSearch {
-  height: 835px;
-  background-color: red;
-  margin: 0px 21px;
+  text-transform: capitalize;
 }
 
 .gifosSearch .verMas {
   text-align: center;
   margin: 78px auto 79px auto;
+}
+
+.gridTemplate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 21px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gridTemplate .gifsSearch {
+  width: 156px;
+  height: 120px;
+  margin: 21px 21px 0px 0px;
+}
+
+.gridTemplate .imgSearch {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .gridTemplate {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gridTemplate .gifsSearch {
+    width: 260px;
+    height: 200px;
+    margin: 29px 29px 0px 0px;
+  }
 }
 
 * {
