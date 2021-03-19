@@ -1,4 +1,5 @@
 //const apiKey = "api_key=y9Vum3HsDR775RvR5yVqbdDQ155aMeRX";
+let suggestions = document.getElementsByClassName("searchBoxAutocomplete")
 function sendApiRequest(){
     let userInput = document.getElementById("input").value
     console.log(userInput)
@@ -7,8 +8,9 @@ function sendApiRequest(){
     let Autocomplete = "https://api.giphy.com/v1/gifs/search/tags?"+q+"?&"+apiKey;
     fetch(Autocomplete)
     .then(response => response.json())
-    .then(data => console.log(data)) //Array con datos
-    //resultados
+    .then(data => {
+        // suggestions.innerHTML = data;
+        console.log(data)}) //Array con datos
     const searchApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&${apiKey}`
     fetch(searchApiURL).then(function(data){
         return data.json()
@@ -26,6 +28,8 @@ function sendApiRequest(){
                     alert("Busqueda inválida")
             })
 }
+
+
 //Poder buscar con enter
 let searchBar = document.getElementsByClassName("input")
 let activeSection = document.getElementsByClassName("active")

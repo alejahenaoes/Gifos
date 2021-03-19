@@ -51,31 +51,36 @@
         </div>
     </div>
         <!-- Barra de búsqueda -->
-        <div class="searchBar">
-            <input type="text" placeholder="Busca GIFOS y más" value="" id="input" class="input">
-                <figure class="iconSearch">
-                    <button onclick = "sendApiRequest()"><img src="assets/icon-search.svg" alt="lupa"></button>
-                </figure>
-                <figure class="active">
-                    <button class="iconSearchActive"><img src="assets/icon-search-modo-noct.svg" alt="active"></button>
-                    <button class="closeSearch"><img src="assets/close.svg" alt="close"></button>
-                </figure>
-                <div class="searchBoxAutocomplete">
+        <div class="allSearch">
+            <div class="searchBar">
+                <input type="text" placeholder="Busca GIFOS y más" value="" id="input" class="input">
+                    <figure class="iconSearch">
+                        <button onclick = "sendApiRequest()"><img src="assets/icon-search.svg" alt="lupa"></button>
+                    </figure>
+                    <figure class="active">
+                        <button class="iconSearchActive"><img src="assets/icon-search-modo-noct.svg" alt="active"></button>
+                        <button class="closeSearch"><img src="assets/close.svg" alt="close"></button>
+                    </figure>
+            </div>
+            <div class="suggestions"> <!-- La que aparece al buscar -->
                     <div class="optionSearch">
                         <div class="divider"></div>
                         <div class="sugerencias"></div>
                     </div>
+                    <!-- Tiene todos los gifos de la búsqueda -->
+                </div>
+                <div class="gifosSearch">
+                    <div>
+                        <h2 class="titleSearch">Título Busqueda</h2>
+                    </div>
+                    <div class="resultsGifosSearch" id="resultSearch">
+                        <!-- grilla con gifs -->
+                    </div>
+                    <div class="verMas">
+                        <img src="/assets/CTA-ver-mas.svg" alt="vermas" class="verMasBtn">
+                    </div>
                 </div>
         </div>
-    
-    <!-- La que no se ve -->
-    <!-- <div class="apiSearchResults" id="apiSearchResults">
-        <h2 class="titleSearch">Título Busqueda</h2>
-        <div class="searchResults">
-            <div class="gifosSearch" id="resultSearch"></div>
-        </div>
-        <img src="/assets/CTA-ver-mas.svg" alt="vermas" class="verMas">
-    </div> -->
             <h6>Trending:</h6>
             <div class="textDownBar">
                 <!-- <p>Reactions, Entertainment, Sports, Stickers, Artists</p> -->
@@ -90,6 +95,7 @@
         <div class="paragraph">
             <p>Mira los últimos <br> GIFOS de nuestra comunidad</p>
         </div>
+
             <div class="slider button-left">
                 <img src="assets/button-slider-left.svg" alt="button-left"  class="button button-l" id="next" onmouseover="this.src='assets/button-slider-left-hover.svg'" onmouseout="this.src='assets/button-slider-left.svg'">
             </div>

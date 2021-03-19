@@ -1,22 +1,40 @@
-.apiSearchResults {
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  background-color: white;
+}
+
+.suggestion {
   display: none;
 }
 
-.titleSearch {
-  font-family: "Montserrat", sans-serif;
-  font-size: 35px;
-  color: #572EE5;
-  text-align: center;
-  line-height: 30px;
-}
-
-.divider {
+.suggestion .divider {
   opacity: 0.5;
   border: 1px solid #9CAFC3;
 }
 
-.searchBoxAutocomplete {
-  display: none;
+.gifosSearch .titleSearch {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  color: #572EE5;
+  margin: 50px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.gifosSearch .resultsGifosSearch {
+  height: 835px;
+  background-color: red;
+  margin: 0px 21px;
+}
+
+.gifosSearch .verMas {
+  text-align: center;
+  margin: 78px auto 79px auto;
 }
 
 * {

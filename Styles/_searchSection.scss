@@ -1,19 +1,39 @@
-.apiSearchResults{
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    background-color: white;
+  }
+
+.suggestion{
     display: none;
-}
-.titleSearch{
-    font-family: $MonsBold;
-    font-size: 35px;
-    color: #572EE5;
-    text-align: center;
-    line-height: 30px;
-}
-.divider{
-    opacity: 0.5;
-    border: 1px solid #9CAFC3;
+    .divider{
+        opacity: 0.5;
+        border: 1px solid #9CAFC3;
+    }
 }
 
-.searchBoxAutocomplete{
-    display: none;
-
-}
+.gifosSearch{
+        .titleSearch{
+            font-family: $MonsBold;
+            font-size: 25px;
+            color: #572EE5;
+            margin: 50px;
+            line-height: 30px;
+            text-align: center;
+            
+        }
+        //Espacio para 12 gifs Mobile
+        .resultsGifosSearch{
+            height: 835px;
+            // width: 100%;
+            background-color: red;
+            margin: 0px 21px;
+        }
+        .verMas{
+            text-align: center;
+            margin: 78px auto 79px auto;
+        }
+    }
