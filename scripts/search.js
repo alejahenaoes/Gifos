@@ -3,6 +3,17 @@ let suggestions = document.getElementsByClassName("searchBoxAutocomplete")
 let imgSearch = document.getElementsByClassName("gifsSearch")
 let titleSearch = document.getElementsByClassName("titleSearch")[0]
 let searchSpace = document.getElementsByClassName("gifosSearch")
+let suggestionsBar = document.getElementsByClassName("allSearch")
+let searchBar = document.getElementsByClassName("input")
+let activeSection = document.getElementsByClassName("active")
+let normalSection = document.getElementsByClassName("iconSearch")
+let closeIcon = document.getElementsByClassName("closeSearch")
+
+let suggestionContentCtn = document.getElementsByClassName("suggestions");
+let suggestionContent = document.getElementsByClassName("contentSugg");
+let suggestionsCtn = document.getElementsByClassName("suggestionsCtn");
+let searchInput = document.getElementsByClassName("input")[0];
+
 function sendApiRequest(){
     let userInput = document.getElementById("input").value
     console.log(userInput)
@@ -12,8 +23,12 @@ function sendApiRequest(){
     fetch(Autocomplete)
     .then(response => response.json())
     .then(data => {
-        // suggestions.innerHTML = data;
-        console.log(data)}) //Array con datos
+        for (let i=0; i<5; i++){
+            let content = data.data[i].name;
+            suggestionContent[i].textContent = content;
+            console.log(data)
+        }
+        }) //Array con datos
     const searchApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&${apiKey}`
     fetch(searchApiURL).then(function(data){
         return data.json()
@@ -37,20 +52,21 @@ function sendApiRequest(){
 
 
 //Poder buscar con enter
-let searchBar = document.getElementsByClassName("input")
-let activeSection = document.getElementsByClassName("active")
-let normalSection = document.getElementsByClassName("iconSearch")
-let closeIcon = document.getElementsByClassName("closeSearch")
 searchBar[0].addEventListener('keydown', (event) => {
     if (event.keyCode === 13) {
       sendApiRequest()
       searchSpace[0].style.display = "inline-block"
+      suggestionsBar[0].style.height = "52px";
+      suggestionsCtn[0].style.display = "none";
     }
   });
   //Funcionalidad de barra activa
+
 searchBar[0].addEventListener("focus", () =>{
     activeSection[0].style.display = "flex";
     normalSection[0].style.display = "none";
+    suggestionsBar[0].style.height = "257px"; //las sugerencias
+    suggestionsCtn[0].style.display = "block"; //las sugerencias
 })
 //Limpieza SearchBar
 closeIcon[0].addEventListener("focus", () =>{
@@ -58,9 +74,9 @@ closeIcon[0].addEventListener("focus", () =>{
     normalSection[0].style.display = "block";
     let inputValue = document.getElementById("input").value = "";
     searchSpace[0].style.display = "none"
+    suggestionsBar[0].style.height = "52px";
+    suggestionsCtn[0].style.display = "none"; //las sugerencias
 })
 
-const sugerencias = document.getElementsByClassName("sugerencias");
 
-let searchInput = document.getElementsByClassName("input")[0];
 

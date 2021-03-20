@@ -164,36 +164,7 @@ background-color: $purpleMain;
   justify-content: center;
 }
 
-.searchBar {
-  width: 334px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  border: 1px solid $purpleMain;
-  border-radius: 27px;
-    input{
-      outline: none;
-      width: 215px;
-      position: absolute;
-      margin-top: 15px;
-      z-index: 2;
-    }
-}
-  .iconSearch {
-    display: flex;
-    position: absolute;
-    margin: 14px 16px 15px 292px;
-  }
-  .active{
-    position: absolute;
-    z-index: 1;
-    width: 296px;
-    margin-top: 13px;
-    display: flex;
-    justify-content: space-between;
-    display: none;
-  }
+
 h6 {
   font-family: $MonsBold;
   font-size: 16px;
@@ -395,20 +366,7 @@ h6 {
     justify-content: center;
     margin-top: 24px;
   }
-  .iconSearch {
-    margin: 14px 16px 15px 511px;
-  }
-  .active{
-    width: 516px;
-    display: none; //con display flex se ve
-  }
-  .searchBar {
-    width: 551px;
-    margin: auto;
-      input{
-        width: 450px;
-      }
-  }
+  
   .tittleHome h3{
     font-size: 35px;
     font-weight: bold;
