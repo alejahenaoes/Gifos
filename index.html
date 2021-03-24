@@ -19,20 +19,22 @@
             <div class="navbar">
                 <div class="logo">
                 <a href="#" class="logo-mobile"><img src="./assets/logo-mobile.svg" alt="GifosLogo" class="logoImg"></a>
-                <a href="#" class="logo-desktop"><img src="./assets/logo-desktop.svg" class="logoImg" alt="GifosLogo"></a>
+                <a href="#" class="logo-desktop"><img src="./assets/logo-desktop.svg" class="GifosLogo" alt="GifosLogo"></a>
                 </div>
-                <nav class="menu-wrapper">
-                <input id="toggle" type="checkbox" class="checkbox-menu">
-                <label class="show-menu" id="show-menu" for="show-header-menu">
-                    <img src="./assets/burger.svg" class="burguer-menu" alt="menú hamburguesa">
-                    <img src="./assets/close.svg" class="close-menu" alt="cerrar menú">
+                <nav class="hamburguerMenu">
+                <input id="showHeader" type="checkbox" class="checkboxMenu">
+                <label class="showMenu" id="showMenu" for="showHeaderMenu">
+                    <img src="./assets/burger.svg" class="burguerMenuIcon" alt="menú hamburguesa">
+                    <img src="./assets/close.svg" class="closeMenuIcon" alt="cerrar menú">
                 </label>
                 <ul class="menu">
-                    <li><a class="nav-item" href="#nocturne" id="btnNightMode">Modo Nocturno</a></li>
+                    <li><a class="navItem nightMode" href="#nocturne" id="btnNightMode">Modo Nocturno</a></li>
                     <hr class="lineaMenu">
-                    <li><a class="nav-item" href="#favorites">Favoritos</a></li>
-                    <hr class="lineaMenu">
-                    <li><a class="nav-item" href="#gifs">Mis GIFOS</a>></li>
+                    <li><a class="navItem favorites" href="#favorites">Favoritos</a></li>
+                    <hr class="lineaMenu myGifs">
+                    <li><a class="navItem" href="#gifs">Mis GIFOS</a></li>
+                    <hr class="lineaMenu newGif">
+                    <li><a class="navItem" href="#crearGifs"><img src="./assets/button-crear-gifo.svg" alt=""></a></li>
                     <hr class="lineaMenu">
                 </ul>
                 </nav>

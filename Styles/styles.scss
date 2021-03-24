@@ -22,64 +22,58 @@ a{
 
 .navbar {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 29px 14px 0px 22px;
+  width: 100%;
   height: 95px;
   z-index: 3;
   position: relative;
   .logo {
     display: flex;
-    position: relative;
-    width: 48px;
-    height: 48px;
+    margin: 34px 14px 0px 22px;
+    cursor: pointer;
     .logo-desktop {
       display: none;
     }
   }
-  .menu-wrapper {
+  .hamburguerMenu {
     display: block;
-    padding-top: 18px;
-    #toggle {
+    .checkboxMenu {
       display: block;
-      position: absolute;
-      align-items: center;
       opacity: 0;
-      width: 20px;
+      transform: translate(3px, 44px);
       height: 20px;
-      padding: 16px 5.9375% 16px 0;
-      z-index: 2;
     }
-    #toggle:checked~ul {
-      height: 1145px;
+    .checkboxMenu:checked~ul {
+      height: 100vh;
       background-color: $purpleMain;
-      margin: -14px;
-      margin-top: 35px;
     }
   }
   .menu {
     background-color: $purpleMain;
     opacity: 0.9;
-    width: 375px;
+    width: 100%;
+    z-index: 2;
     position: absolute;
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
     height: 0px;
     right: 0;
     list-style: none;
     overflow: hidden;
     align-items: center;
+    font-family: $MonsBold;
+    font-weight: bold;
     li {
       height: 60px;
-      width: 375px;
+      width: 100%;
       background-color: $purpleMain;
       margin: 16px 0 8px 16px;
-      .nav-item {
+      .navItem{
         background-color: $purpleMain;
         text-decoration: none;
         color: white;
-        font-size: 16px;
+        font-size: 15px;
         display: flex;
         justify-content: center;
         position: relative;
@@ -94,24 +88,8 @@ a{
       }
     }
   }
-  .checkbox-menu{
-    display: none;
-    &:checked{
-      ~.menu {
-        display: flex;
-      }
-      ~.show-menu{
-        .burguer-menu{
-          display: none;
-        }
-        .close-menu{
-          display: block;
-        }
-      }
-      }
-  }
-  .show-menu{
-    margin: 47px 27px 34px 0;
+  .showMenu img{
+    margin: 36px 27px 34px 0;
     width: 15px;
     height: 15px;
     cursor: pointer;
@@ -125,6 +103,22 @@ a{
         display: none;
     }
 }
+  .checkboxMenu, .closeMenuIcon{
+    display: none;
+    &:checked{
+      ~.menu {
+        display: flex;
+      }
+      ~.showMenu{
+        .burguerMenuIcon{
+          display: none;
+        }
+        .closeMenuIcon{
+          display: block;
+        }
+      }
+      }
+  }
 }
 
 .tittleHome h3{

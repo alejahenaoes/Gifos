@@ -276,14 +276,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 29px 14px 0px 22px;
+  width: 100%;
   height: 95px;
   z-index: 3;
   position: relative;
@@ -293,44 +291,36 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  width: 48px;
-  height: 48px;
+  margin: 34px 14px 0px 22px;
+  cursor: pointer;
 }
 
 .navbar .logo .logo-desktop {
   display: none;
 }
 
-.navbar .menu-wrapper {
+.navbar .hamburguerMenu {
   display: block;
-  padding-top: 18px;
 }
 
-.navbar .menu-wrapper #toggle {
+.navbar .hamburguerMenu .checkboxMenu {
   display: block;
-  position: absolute;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   opacity: 0;
-  width: 20px;
+  -webkit-transform: translate(3px, 44px);
+          transform: translate(3px, 44px);
   height: 20px;
-  padding: 16px 5.9375% 16px 0;
-  z-index: 2;
 }
 
-.navbar .menu-wrapper #toggle:checked ~ ul {
-  height: 1145px;
+.navbar .hamburguerMenu .checkboxMenu:checked ~ ul {
+  height: 100vh;
   background-color: #572EE5;
-  margin: -14px;
-  margin-top: 35px;
 }
 
 .navbar .menu {
   background-color: #572EE5;
   opacity: 0.9;
-  width: 375px;
+  width: 100%;
+  z-index: 2;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,7 +329,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 40px;
   height: 0px;
   right: 0;
   list-style: none;
@@ -347,20 +336,22 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 .navbar .menu li {
   height: 60px;
-  width: 375px;
+  width: 100%;
   background-color: #572EE5;
   margin: 16px 0 8px 16px;
 }
 
-.navbar .menu li .nav-item {
+.navbar .menu li .navItem {
   background-color: #572EE5;
   text-decoration: none;
   color: white;
-  font-size: 16px;
+  font-size: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,40 +372,40 @@ a {
   height: 0.1px;
 }
 
-.navbar .checkbox-menu {
-  display: none;
-}
-
-.navbar .checkbox-menu:checked ~ .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.navbar .checkbox-menu:checked ~ .show-menu .burguer-menu {
-  display: none;
-}
-
-.navbar .checkbox-menu:checked ~ .show-menu .close-menu {
-  display: block;
-}
-
-.navbar .show-menu {
-  margin: 47px 27px 34px 0;
+.navbar .showMenu img {
+  margin: 36px 27px 34px 0;
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
 
-.navbar .show-menu .burguer-menu {
+.navbar .showMenu img .burguer-menu {
   width: 14px;
   height: 14px;
 }
 
-.navbar .show-menu .close-menu {
+.navbar .showMenu img .close-menu {
   width: 14px;
   height: 14px;
   display: none;
+}
+
+.navbar .checkboxMenu, .navbar .closeMenuIcon {
+  display: none;
+}
+
+.navbar .checkboxMenu:checked ~ .menu, .navbar .closeMenuIcon:checked ~ .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .checkboxMenu:checked ~ .showMenu .burguerMenuIcon, .navbar .closeMenuIcon:checked ~ .showMenu .burguerMenuIcon {
+  display: none;
+}
+
+.navbar .checkboxMenu:checked ~ .showMenu .closeMenuIcon, .navbar .closeMenuIcon:checked ~ .showMenu .closeMenuIcon {
+  display: block;
 }
 
 .tittleHome h3 {

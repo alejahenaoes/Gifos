@@ -75,7 +75,6 @@
         }
     }
 }
-
 .gifosSearch{
     display: none;
         .titleSearch{
@@ -111,7 +110,7 @@
 .hoverOptionsSearch{
     display: none;
 }
-    @media (min-width:768px){
+@media (min-width:768px){
         .gridTemplate{
             justify-content: center;
         .gifsSearch{
@@ -217,4 +216,4 @@
           font-size: 16px;
       }
   }
-    }
+}
