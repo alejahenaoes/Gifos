@@ -86,6 +86,7 @@
 .allSearch .suggestionsCtn .suggestion .contentSugg {
   font-size: 18px;
   margin-top: 9px;
+  display: none;
 }
 
 .allSearch .suggestionsCtn .iconSearchSuggestion {
@@ -134,6 +135,10 @@
   height: 100%;
 }
 
+.hoverOptionsSearch {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .gridTemplate {
     -webkit-box-pack: center;
@@ -176,6 +181,75 @@
   .allSearch .suggestionsCtn .divider {
     width: 505px;
   }
+  .hoverOptionsSearch {
+    display: inline-block;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    text-align: end;
+    width: 260px;
+    height: 200px;
+    -webkit-transform: translate(0px, -201px);
+            transform: translate(0px, -201px);
+  }
+  .hoverOptionsSearch .optionsGifSearch {
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .hoverOptionsSearch .favsSearch img, .hoverOptionsSearch .maxSearch img, .hoverOptionsSearch .downSearch img {
+    border-radius: 6px;
+  }
+  .hoverOptionsSearch .favsSearch, .hoverOptionsSearch .maxSearch, .hoverOptionsSearch .downSearch {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 6px;
+  }
+  .hoverOptionsSearch .favsSearch .btnHoverSearch, .hoverOptionsSearch .maxSearch .btnHoverSearch, .hoverOptionsSearch .downSearch .btnHoverSearch {
+    display: none;
+  }
+  .hoverOptionsSearch .favsSearch:hover .normalSearch, .hoverOptionsSearch .maxSearch:hover .normalSearch, .hoverOptionsSearch .downSearch:hover .normalSearch {
+    display: none;
+  }
+  .hoverOptionsSearch .favsSearch:hover .btnHoverSearch, .hoverOptionsSearch .maxSearch:hover .btnHoverSearch, .hoverOptionsSearch .downSearch:hover .btnHoverSearch {
+    display: inline-block;
+  }
+  .gifsSearch:hover .hoverOptionsSearch {
+    opacity: 0.7;
+    background-color: #572EE5;
+  }
+  .textGifSearch {
+    color: #FFFFFF;
+    background: transparent;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    margin: 90px 0px 0px 12px;
+    width: 100%;
+  }
+  .textGifSearch p {
+    margin-top: 22px;
+  }
+  .textGifSearch .userSearch {
+    font-size: 15px;
+    background: transparent;
+    height: 17px;
+    margin: 90px 0 0 13px;
+  }
+  .textGifSearch .titleGifSearch {
+    height: 40px;
+    width: 100%;
+    background: transparent;
+    font-weight: bold;
+    font-size: 16px;
+  }
 }
 
 * {
@@ -210,8 +284,8 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 29px 14px 0px 22px;
-  height: 44px;
-  z-index: 100;
+  height: 95px;
+  z-index: 3;
   position: relative;
 }
 
@@ -230,7 +304,7 @@ a {
 
 .navbar .menu-wrapper {
   display: block;
-  padding: 16px 0 16px 0;
+  padding-top: 18px;
 }
 
 .navbar .menu-wrapper #toggle {
@@ -333,13 +407,13 @@ a {
 }
 
 .navbar .show-menu .burguer-menu {
-  width: 100%;
-  height: 100%;
+  width: 14px;
+  height: 14px;
 }
 
 .navbar .show-menu .close-menu {
-  width: 100%;
-  height: 100%;
+  width: 14px;
+  height: 14px;
   display: none;
 }
 
@@ -351,7 +425,7 @@ a {
   letter-spacing: 0;
   color: #572EE5;
   text-align: center;
-  margin: 25px 45px 31px;
+  margin: 7px 45px 31px;
 }
 
 .tittleHome h3 .gifosWord {
