@@ -44,7 +44,7 @@ a{
       transform: translate(3px, 44px);
       height: 20px;
     }
-    .checkboxMenu:checked~ul {
+    .checkboxMenu:checked~div {
       height: 100vh;
       background-color: $purpleMain;
     }
@@ -102,6 +102,9 @@ a{
         height: 14px;
         display: none;
     }
+}
+.newGif{
+  display: none;
 }
   .checkboxMenu, .closeMenuIcon{
     display: none;
@@ -341,6 +344,9 @@ h6 {
 
 @media (min-width: 768px) {
   .navbar{
+    display: flex;
+    justify-content: space-between;
+    width: auto;
     .logo{
       height: 60px;
       position: relative;
@@ -352,6 +358,74 @@ h6 {
         display: none;
       }
     }
+      .hamburguerMenu {
+        display: flex;
+        .checkboxMenu {
+          opacity: 0;
+          transform: translate(3px, 44px);
+          height: 20px;
+        }
+        .checkboxMenu:checked~div {
+          height: 100vh;
+          background-color: $purpleMain;
+        }
+      }
+      .menu {
+        background-color: transparent;
+        opacity: 1;
+        height: 90px;
+        width: auto;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        margin-right: 110px;
+        li {
+          height: 60px;
+          width: auto;
+          background-color: transparent;
+          margin: 0px 0 0px 0px;
+          text-transform: uppercase;
+          .navItem{
+            background-color: transparent;
+            text-decoration: none;
+            color: $purpleMain;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            letter-spacing: 0;
+            line-height: 60px;
+            font-size: 13px;
+          }
+        }
+      }
+      .showMenu img{
+        display: none;
+    }
+    .newGif{
+      display: inline-block;
+      width: 55px;
+      li{
+        margin: 0px;
+      }
+    }
+      .checkboxMenu, .closeMenuIcon{
+        display: none;
+        &:checked{
+          ~.menu {
+            display: none;
+          }
+          ~.showMenu{
+            .burguerMenuIcon{
+              display: none;
+            }
+            .closeMenuIcon{
+              display: block;
+            }
+          }
+          }
+      }
+    }
   }
   .imageTopSearch {
     display: flex;
@@ -360,7 +434,7 @@ h6 {
     justify-content: center;
     margin-top: 24px;
   }
-  
+
   .tittleHome h3{
     font-size: 35px;
     font-weight: bold;
@@ -463,5 +537,5 @@ h6 {
       margin-right: 158px;
     }
   }
-  }
+
 

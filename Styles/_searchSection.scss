@@ -8,7 +8,6 @@
   }
 .allSearch{
   height: 52px; //con 257 se "despliega"
-//   background-color: red;
   width: 334px;
   margin: auto;
   border: 1px solid $purpleMain;
@@ -46,17 +45,17 @@
         height: 205px;
         width: 332px;
         border-radius: 27px;
-        // margin: auto;
-        // background-color: blue;
+        font-family: $robotoReg;
+        font-size: 16px;
+        color: #9CAFC3 ;
+        text-align: left;
         .divider{
-            // display: none;
             opacity: 0.5;
             width: 310px;
             margin: auto;
             border: 1px solid #9CAFC3;
         }
         .suggestion{
-            // background-color: chartreuse;
             height: 22px;
             padding-left: 23px;
             width: 329px;
@@ -141,14 +140,8 @@
                   display: none; //con block
                   height: 205px;
                   width: 549px;
-                //   border-radius: 27px;
-                  // margin: auto;
-                //   background-color: blue;
                   .divider{
-                    //   opacity: 0.5;
                       width: 505px;
-                    //   margin: auto;
-                    //   border: 1px solid #9CAFC3;
                   }
               }
           }
@@ -196,24 +189,26 @@
     background: transparent;
     font-family: $robotoReg;
     text-align: left;
-    margin: 90px 0px 0px 12px;
+    margin: 80px ​0px 0px 12px;
     width: 100%;
-      p{
-          margin-top: 22px;
+    p{
+          margin-top: 0px;
         }
       .userSearch{
         font-size: 15px;
         background: transparent;
         height: 17px;
-        // margin-bottom: 5px;
         margin: 90px 0 0 13px;
       }
       .titleGifSearch{
-          height: 40px;
-          width: 100%;
+          line-height: normal; //que no se sobreponga el texto
+          height: auto;
+          width: 95%;
           background: transparent;
           font-weight: bold;
           font-size: 16px;
+          margin: 0px 0 0 10px;
+
       }
   }
 }
