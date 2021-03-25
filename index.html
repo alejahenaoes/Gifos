@@ -18,8 +18,8 @@
             <div class="container">
             <div class="navbar">
                 <div class="logo">
-                <a href="#" class="logo-mobile"><img src="./assets/logo-mobile.svg" alt="GifosLogo" class="logoImg"></a>
-                <a href="#" class="logo-desktop"><img src="./assets/logo-desktop.svg" class="GifosLogo" alt="GifosLogo"></a>
+                <a class="logo-mobile"><img src="./assets/logo-mobile.svg" alt="GifosLogo" class="logoImg"></a>
+                <a class="logo-desktop"><img src="./assets/logo-desktop.svg" class="GifosLogo" alt="GifosLogo"></a>
                 </div>
                 <nav class="hamburguerMenu">
                     <input id="showHeader" type="checkbox" class="checkboxMenu">
@@ -30,11 +30,11 @@
                     <div class="menu">
                         <li><a class="navItem nightMode" href="#nocturne" id="btnNightMode">Modo Nocturno</a></li>
                         <hr class="lineaMenu">
-                        <li><a class="navItem favorites" href="#favorites">Favoritos</a></li>
+                        <li><a class="navItem favorites" id="favItem">Favoritos</a></li>
                         <hr class="lineaMenu ">
-                        <li><a class="navItem myGifs" href="#gifs">Mis GIFOS</a></li>
+                        <li><a class="navItem myGifs" id="myItem">Mis GIFOS</a></li>
                         <hr class="lineaMenu ">
-                        <li class="newGif"><a class="navItem newGif" href="#crearGifs"><img src="./assets/button-crear-gifo.svg" alt=""></a></li>
+                        <li class="newGif"><a class="navItem newGif" href="#crearGifs"><img src="./assets/button-crear-gifo.svg" alt="" onmouseover="this.src='./assets/CTA-crear-gifo-hover.svg'" onmouseout="this.src='./assets/button-crear-gifo.svg'"></a></li>
                         <hr class="lineaMenu newGif">
                     </div>
                 </nav>
@@ -128,12 +128,94 @@
                     <!-- grilla con gifs -->
                 </div>
                 <div class="verMas">
-                    <img src="/assets/CTA-ver-mas.svg" alt="vermas" class="verMasBtn">
+                    <img src="./assets/CTA-ver-mas.svg" alt="vermas" class="verMasBtn">
                 </div>
         </div>
             <h6>Trending:</h6>
             <div class="textDownBar">
                 <!-- <p>Reactions, Entertainment, Sports, Stickers, Artists</p> -->
+            </div>
+        </div>
+    </section>
+    <!-- Favoritos -->
+    <section class="favoritesSection">
+        <div class="titleSection">
+            <img src="./assets/icon-favoritos.svg" alt="favsIcon">
+            <h1 class="titleFavorites">Favoritos</h1>
+        </div>
+        <div class="sinFavs">
+            <img src="./assets/icon-fav-sin-contenido.svg" alt="sinFavs">
+            <p class="textSinFavs">"¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"</p>
+        </div>
+        <div class="gridFavorites">
+            <div class="favImage">
+                <img src="" alt="">
+                <div class="hoverStyleSearch">
+                    <figure class="hoverOptionsSearch">
+                        <div class="optionsGifSearch">
+                            <div class="favsSearch">
+                                <img src="assets/icon-fav.svg" alt="favBtn" class="normalSearch btn" id="favBtnNormal">
+                                <img src="assets/icon-fav-hover.svg" alt="favBtn" class="btnHoverSearch btn">
+                            </div>
+                            <div class="downSearch">
+                                <img src="assets/icon-download.svg" alt="dowBtn" class="normalSearch btn">
+                                <img src="assets/icon-download-hover.svg" alt="dowBtn" class="btnHoverSearch btn">
+                            </div>
+                            <div class="maxSearch">
+                                <img src="assets/icon-max-normal.svg" alt="maxBtn" class="normalSearch btn">
+                                <img src="assets/icon-max-hover.svg" alt="maxBtn" class="btnHoverSearch btn">
+                            </div>
+                        </div>
+                        <div class="textGifSearch">
+                            <p id="user" class="userSearch">User</p>
+                            <p id="titleGif" class="titleGifSearch">Título GIFO</p>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            <div class="seeMore">
+                <img src="./assets/CTA-ver-mas.svg" alt="vermas" class="verMasBtnFavs">
+            </div>
+        </div>
+    </section>
+    <!-- Mis gifs -->
+    <section class="myGifsSection">
+        <div class="titleSection">
+            <img src="./assets/icon-mis-gifos.svg" alt="favsIcon">
+            <h1 class="titlemyGifs">Mis GIFOS</h1>
+        </div>
+        <div class="sinGifs">
+            <img src="./assets/icon-mis-gifos-sin-contenido.svg" alt="sinFavs">
+            <p class="textSinGifs">¡Anímate a crear tu primer GIFO!</p>
+        </div>
+        <div class="gridMyGifs">
+            <div class="myImage">
+                <img src="" alt="">
+                <div class="hoverStyleSearch">
+                    <figure class="hoverOptionsSearch">
+                        <div class="optionsGifSearch">
+                            <div class="favsSearch">
+                                <img src="assets/icon-fav.svg" alt="favBtn" class="normalSearch btn" id="favBtnNormal">
+                                <img src="assets/icon-fav-hover.svg" alt="favBtn" class="btnHoverSearch btn">
+                            </div>
+                            <div class="downSearch">
+                                <img src="assets/icon-download.svg" alt="dowBtn" class="normalSearch btn">
+                                <img src="assets/icon-download-hover.svg" alt="dowBtn" class="btnHoverSearch btn">
+                            </div>
+                            <div class="maxSearch">
+                                <img src="assets/icon-max-normal.svg" alt="maxBtn" class="normalSearch btn">
+                                <img src="assets/icon-max-hover.svg" alt="maxBtn" class="btnHoverSearch btn">
+                            </div>
+                        </div>
+                        <div class="textGifSearch">
+                            <p id="user" class="userSearch">User</p>
+                            <p id="titleGif" class="titleGifSearch">Título GIFO</p>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            <div class="seeMore">
+                <img src="./assets/CTA-ver-mas.svg" alt="vermas" class="verMasBtnmyGifs">
             </div>
         </div>
     </section>
@@ -183,6 +265,8 @@
                 <img src="assets/Button-Slider-right.svg" alt="button-right" class="button button-r" id="previous" onmouseover="this.src='assets/button-slider-right-hover.svg'" onmouseout="this.src='assets/Button-Slider-right.svg'">
             </div>
     </section>
+    <!-- Crear Gifs -->
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="footerDescription1">Compartir en:

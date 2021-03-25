@@ -1,5 +1,8 @@
 @import 'variable.scss';
 @import '_searchSection.scss';
+@import '_favorites.scss';
+@import '_myGifs.scss';
+@import '_createGif.scss';
 
 *{
   box-sizing: border-box;
@@ -41,7 +44,7 @@ a{
     .checkboxMenu {
       display: block;
       opacity: 0;
-      transform: translate(3px, 44px);
+      transform: translate(3px, 52px);
       height: 20px;
     }
     .checkboxMenu:checked~div {
@@ -80,11 +83,6 @@ a{
         letter-spacing: 0;
         line-height: 60px;
         font-size: 15px;
-      }
-      .lineaMenu {
-        justify-content: center;
-        width: 41px;
-        height: 0.1px;
       }
     }
   }
@@ -426,116 +424,113 @@ h6 {
           }
       }
     }
-  }
-  .imageTopSearch {
-    display: flex;
-    width: 399px;
-    height: 190px;
-    justify-content: center;
-    margin-top: 24px;
-  }
-
-  .tittleHome h3{
-    font-size: 35px;
-    font-weight: bold;
-    width: 600px;
-    margin: 76px auto 0px auto;
-    line-height: 50px;
-    .gifosWord {
+    .imageTopSearch {
+      display: flex;
+      width: 399px;
+      height: 190px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+    .tittleHome h3{
       font-size: 35px;
+      font-weight: bold;
+      width: 600px;
+      margin: 76px auto 0px auto;
       line-height: 50px;
-    }
-  }
-  .textDownBar {
-    width: 402px;
-    font-size: 16px;
-    margin: 7px auto 95px auto;
-    height: 25px;
-  }
-  .containercarousel{
-    overflow: hidden;
-    display: flex;
-  }
-  .trendingSection{
-    height: 640px;
-    padding-top: 68px;
-    .titleSection h2{
-        font-size: 25px;
-    }
-    .paragraph p{
-        margin: 12px 0px 11.5px 0px;
-        font-size: 18px;
-        br {
-          display: none;
-        }
-    }
-  }
-  .button{
-    display: inline-block;
-  }
-  .button-right{
-    display: flex;
-    justify-content: flex-end;
-    background-color: transparent;
-    transform: translate(-96px, -186px);
-    }
-    .button-left {
-      height: 0;
-      z-index: 1;
-      position: absolute;
-      background-color: transparent;
-      padding: 172px 94px;
-    }
-      .containercarousel{
-        margin: 0px 156px;
-        height: 358px;
-        align-items: center;
-        .boxes-container{
-                width: 357px;
-                height: 275px;
-                transform: translate(-18px);
-                overflow-y: visible;
-            .gifos{
-                width: 357px;
-                height: 275px;
-                margin: 0px 14.5px 0px 14.5px;
-                transition: 0.5s;
-            }
-        }
+      .gifosWord {
+        font-size: 35px;
+        line-height: 50px;
       }
-      .hoverOptions{
-        width: 100%;
-        height: 100%;
-        transform: translate(0px, -276px);
-        .textGif{
-          margin: 163px 0px 0px 12px;
-          p{
-              margin: 0;
+    }
+    .textDownBar {
+      width: 402px;
+      font-size: 16px;
+      margin: 7px auto 95px auto;
+      height: 25px;
+    }
+    .containercarousel{
+      overflow: hidden;
+      display: flex;
+    }
+    .trendingSection{
+      height: 640px;
+      padding-top: 68px;
+      .titleSection h2{
+          font-size: 25px;
+      }
+      .paragraph p{
+          margin: 12px 0px 11.5px 0px;
+          font-size: 18px;
+          br {
+            display: none;
           }
       }
-  }
-  //footer
-  .footer{
-    display: flex;
-    flex-direction: row;
-    height: 116px;
-    justify-content: space-between;
-    p{
-      font-size: 13px;
     }
-    .socialMedia{
-      padding: 0;
-      transform: translateY(-10px);
+    .button{
+      display: inline-block;
     }
-    .footerDescription1{
+    .button-right{
       display: flex;
-      gap: 17px;
-      margin-left: 156px;
+      justify-content: flex-end;
+      background-color: transparent;
+      transform: translate(-96px, -186px);
+      }
+      .button-left {
+        height: 0;
+        z-index: 1;
+        position: absolute;
+        background-color: transparent;
+        padding: 172px 94px;
+      }
+        .containercarousel{
+          margin: 0px 156px;
+          height: 358px;
+          align-items: center;
+          .boxes-container{
+                  width: 357px;
+                  height: 275px;
+                  transform: translate(-18px);
+                  overflow-y: visible;
+              .gifos{
+                  width: 357px;
+                  height: 275px;
+                  margin: 0px 14.5px 0px 14.5px;
+                  transition: 0.5s;
+              }
+          }
+        }
+        .hoverOptions{
+          width: 100%;
+          height: 100%;
+          transform: translate(0px, -276px);
+          .textGif{
+            margin: 163px 0px 0px 12px;
+            p{
+                margin: 0;
+            }
+        }
     }
-    .footerDescription2{
-      justify-content: space-around;
-      margin-right: 158px;
+    //footer
+    .footer{
+      display: flex;
+      flex-direction: row;
+      height: 116px;
+      justify-content: space-between;
+      p{
+        font-size: 13px;
+      }
+      .socialMedia{
+        padding: 0;
+        transform: translateY(-10px);
+      }
+      .footerDescription1{
+        display: flex;
+        gap: 17px;
+        margin-left: 156px;
+      }
+      .footerDescription2{
+        justify-content: space-around;
+        margin-right: 158px;
+      }
     }
   }
-
-

@@ -115,6 +115,31 @@ closeIcon[0].addEventListener("focus", () =>{
     suggestionsCtn[0].style.display = "none"; //las sugerencias
 })
 
+//Opciones Menú
+let favoriteSection = document.getElementsByClassName("favoritesSection")
+let searchSection = document.getElementsByClassName("searchBoxMain")
+let favOption = document.getElementById("favItem")
+let myGifsSection = document.getElementsByClassName("myGifsSection")
+let myOption = document.getElementById("myItem")
+
+let logo= document.getElementsByClassName("logo")[0];
+logo.addEventListener("click", ()=>{
+    searchSection[0].style.display = "block";
+    favoriteSection[0].style.display = "none";
+    myGifsSection[0].style.display = "none"
+})
+favOption.addEventListener("click", () =>{
+    favoriteSection[0].style.display = "block";
+    searchSection[0].style.display = "none";
+    myGifsSection[0].style.display = "none"
+})
+myOption.addEventListener("click", () =>{
+    myGifsSection[0].style.display = "block"
+    searchSection[0].style.display = "none";
+    favoriteSection[0].style.display = "none";
+})
+
+
 // for(let i=0; i<(ciclode12); i++){
 //     let boxTemplateSearch = (cardTemplate del html)[0].cloneNode(true);
 //      boxTemplateSearch.classList.toggle("nombreEspecificoSearch");

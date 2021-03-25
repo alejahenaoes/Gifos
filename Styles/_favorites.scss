@@ -1,0 +1,98 @@
+@import 'variable.scss';
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    background-color: white;
+}
+.favoritesSection{
+    border: none;
+    display: none;
+    .titleSection{
+        margin-top: 5px;
+        text-align: center;
+        .titleFavorites{
+            margin-top: 7px;
+            font-family: $MonsBold;
+            color: #572EE5;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    .verMasBtnFavs{
+        text-align: center;
+        margin: auto;
+    }
+}
+.sinFavs{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 34px;
+    img{
+        margin: 60px auto auto;
+    }
+    .textSinFavs{
+        margin: auto;
+        margin-top: 20px;
+        width: 250px;
+        font-family: $MonsBold;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0;
+        color: #50E3C2;
+    }
+}
+.gridFavorites{
+    display: none;
+    // display: flex;
+    flex-wrap: wrap;
+    margin-left: 21px;
+    justify-content: center;
+    .favImage{
+        width: 156px;
+        height: 120px;
+        background-color: black;
+        margin: 21px 21px 0px 0px;
+    }
+}
+@media (min-width:768px){
+    .favoritesSection{
+        .titleSection{
+            .titleFavorites{
+                margin: 11px 0px 0px 0px;
+                font-family: $MonsBold;
+                font-size: 25px;
+                line-height: 30px;
+
+            }
+        }
+        .gridFavorites{
+            // margin-left: 156px;
+            justify-content: center;
+        .favImage{
+            width: 260px;
+            height: 200px;
+            margin: 29px 29px 0px 0px;
+        }
+        }
+    }
+    .sinFavs{
+        padding-bottom: 137px;
+        img{
+            margin: 109.3px auto auto;
+        }
+        .textSinFavs{
+        margin-top: 24px;
+        width: 431px;
+        font-size: 22px;
+        line-height: 33px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0;
+        }
+    }
+}
