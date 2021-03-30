@@ -28,13 +28,19 @@
                         <img src="./assets/close.svg" class="closeMenuIcon" alt="cerrar menú">
                     </label>
                     <div class="menu">
-                        <li><a class="navItem nightMode" href="#nocturne" id="btnNightMode">Modo Nocturno</a></li>
-                        <hr class="lineaMenu">
-                        <li><a class="navItem favorites" id="favItem">Favoritos</a></li>
-                        <hr class="lineaMenu ">
-                        <li><a class="navItem myGifs" id="myItem">Mis GIFOS</a></li>
-                        <hr class="lineaMenu ">
-                        <li class="newGif"><a class="navItem newGif" href="#crearGifs"><img src="./assets/button-crear-gifo.svg" alt="" onmouseover="this.src='./assets/CTA-crear-gifo-hover.svg'" onmouseout="this.src='./assets/button-crear-gifo.svg'"></a></li>
+                        <div class="night">
+                            <li><a class="navItem nightMode" id="btnNightMode">Modo Nocturno</a></li>
+                            <hr class="lineaMenu">
+                        </div>
+                        <div class="favos">
+                            <li><a class="navItem favorites" id="favItem">Favoritos</a></li>
+                            <hr class="lineaMenu">
+                        </div>
+                        <div class="mine">
+                            <li><a class="navItem myGifs" id="myItem">Mis GIFOS</a></li>
+                            <hr class="lineaMenu ">
+                        </div>
+                        <li class="newGifo"><a class="navItem"><img id="newGif" src="./assets/button-crear-gifo.svg" alt="" onmouseover="this.src='./assets/CTA-crear-gifo-hover.svg'" onmouseout="this.src='./assets/button-crear-gifo.svg'"></a></li>
                         <hr class="lineaMenu newGif">
                     </div>
                 </nav>
@@ -266,7 +272,39 @@
             </div>
     </section>
     <!-- Crear Gifs -->
-    
+    <section class="createSection">
+        <div class="camera">
+            <div class="createScreen"></div>
+            <img src="./assets/camara.svg" alt="camera" class="camImg">
+            <img src="./assets/element-luz-camara.svg" alt="luzCamera" class="lightImg">
+        </div>
+            <div class="createCtn">
+                <div class="step1Text">
+                    <div class="inner">
+                        <h2 class="createTitleMain">Aquí podrás</h2><br>
+                        <h2 class="createTitleMain">crear tus propios<span class="gifosWord"> GIFOS</span></h2>
+                        <p class="createContent">¡Crea tu GIFO en sólo 3 pasos!</p>
+                        <p class="createContent">(sólo necesitas una cámara para grabar un video)</p>
+                    </div>
+                </div>
+                <div class="stepsOptions">
+                    <div class="steps">
+                        <div class="item1">1</div>
+                        <div class="item2">2</div>
+                        <div class="item3">3</div>
+                    </div>
+                </div>
+                <div class="createButtons">
+                    <button class="start btn">COMENZAR</button>
+                    <!-- <button class="record btn">GRABAR</button>
+                    <button class="finish btn">FINALIZAR</button>
+                    <button class="upload btn">SUBIR GIFO</button> -->
+                </div>
+            </div>
+            <div class="movieIcon">
+                <img src="./assets/pelicula.svg" alt="movieIcon" class="movieImg">
+            </div>
+        </section>
     <!-- Footer -->
     <footer class="footer">
         <div class="footerDescription1">Compartir en:

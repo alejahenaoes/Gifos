@@ -1,4 +1,14 @@
 //const apiKey = "api_key=y9Vum3HsDR775RvR5yVqbdDQ155aMeRX";
+let favoriteSection = document.getElementsByClassName("favoritesSection")
+let searchSection = document.getElementsByClassName("searchBoxMain")
+let favOption = document.getElementById("favItem")
+let myGifsSection = document.getElementsByClassName("myGifsSection")
+let myOption = document.getElementById("myItem")
+let createSection = document.getElementsByClassName("createSection")
+let newGifOption = document.getElementById("newGif")
+let trendingSection = document.getElementsByClassName("trendingSection")
+let logo= document.getElementsByClassName("logo")[0];
+
 let suggestions = document.getElementsByClassName("searchBoxAutocomplete")
 let imgSearch = document.getElementsByClassName("imgSearch")
 let titleSearch = document.getElementsByClassName("titleSearch")[0]
@@ -10,6 +20,7 @@ let normalSection = document.getElementsByClassName("iconSearch")
 let closeIcon = document.getElementsByClassName("closeSearch")
 
 let suggestionContentCtn = document.getElementsByClassName("suggestions");
+let suggestionBox = document.getElementsByClassName("suggestion");
 let suggestionContent = document.getElementsByClassName("contentSugg");
 let suggestionsCtn = document.getElementsByClassName("suggestionsCtn");
 let searchInput = document.getElementsByClassName("input")[0];
@@ -20,14 +31,23 @@ let ctn = document.getElementsByClassName("gridTemplate");
 
 //Clonar template
 for(let i=0; i<12; i++){
-    let boxTemplateSearch = (card)[0].cloneNode(true);
-    boxTemplateSearch.classList.toggle("Search"+i);
-    (ctn)[0].appendChild(boxTemplateSearch);
+    let boxTemplateSearch1 = (card)[0].cloneNode(true);
+    boxTemplateSearch1.classList.toggle("Search"+i);
+    (ctn)[0].appendChild(boxTemplateSearch1);
     (card)[i+1].style.display = "inline-block";
 }
 window.onload = function(){
     ctn[0].removeChild(card[0]);
 }
+// function verMas(){
+//     for(let i=0; i<24; i++){
+//         let boxTemplateSearch2 = (card)[0].cloneNode(true);
+//         boxTemplateSearch2.classList.toggle("Search"+i);
+//         (ctn)[0].appendChild(boxTemplateSearch2);
+//         (card)[i+1].style.display = "inline-block";
+//         (card)[i+1].style.backgroundColor = "red";
+//     }
+// }
 
 function sendApiRequest(){
     let userInput = document.getElementById("input").value
@@ -39,10 +59,10 @@ function sendApiRequest(){
         .then(function(json){
                 for (let i=0; i < 12; i++){
                     // console.log(json.data)
-                    console.log(json.data[i].images.fixed_height.url)//trae 12 gifs
+                    console.log(json.data[i].images.fixed_height.url)
                     let imgPath = json.data[i].images.fixed_height.url
                     imgSearch[i].setAttribute("src", imgPath)
-                    imgSearch[i].id="imgGifSearch"+i; //se lo pone a la imagen
+                    imgSearch[i].id="imgGifSearch"+i; //se lo pone a la image
                     titleSearch.innerHTML = userInput;
                     let titleGif = document.getElementsByClassName("titleGifSearch");
                     let titleGifApi = json.data[i].title
@@ -50,9 +70,14 @@ function sendApiRequest(){
                     let userGif = document.getElementsByClassName("userSearch");
                     let userGifApi =json.data[i].username;
                     userGif[i].textContent = userGifApi;
-                    // let userGifo = gifo_response.data[i].username;
-                    // userGif[i].textContent = userGifo;
                 }
+                // suggestionBox[0].addEventListener("click", ()=>{
+                //     alert("Hola")
+                // })
+                // let resultsGifos = [];
+                // resultsGifos.push(imgSearch);
+                // console.log(resultsGifos)
+                // gifos_searched_array.push(gifo);
             }).catch(function(){
                     alert("Busqueda inválida")
             })
@@ -69,9 +94,17 @@ function autocomplete(){
         .then(datos => {
             for (let i=0; i < datos.data.length; i++){
                 let content = datos.data[i].name;
+                // console.log(content)
                 suggestionContent[i].textContent = content;
-                // suggestionContent[i].id="sugg"+i;
                 suggestionContent[i].style.display = "inline-block";
+                //click suggestion
+                suggestionBox[i].addEventListener("click", ()=>{
+                    // let clickSuggestion = content
+                    // userInput = content[i]
+                    // userInput.value = content[i];
+                    // sendApiRequest();
+                    // alert("Hi")
+                })
             }
             console.log(datos.data.length) //Array con datos
             })
@@ -87,18 +120,18 @@ function autocomplete(){
 //Poder buscar con enter
 searchBar[0].addEventListener('keyup', (event) => {
     if (event.keyCode === 13) {
-      sendApiRequest()
-      searchSpace[0].style.display = "inline-block"
-      suggestionsBar[0].style.height = "52px";
-      suggestionsCtn[0].style.display = "none";
+        sendApiRequest()
+        searchSpace[0].style.display = "inline-block"
+        suggestionsBar[0].style.height = "52px";
+        suggestionsCtn[0].style.display = "none";
     }else{ //presionando otra tecla diferente a enter
         autocomplete();
         // suggestionsBar[0].style.height = "257px"; //las sugerencias
         // suggestionsCtn[0].style.display = "block"; //las sugerencias
     }
-  });
-  //Funcionalidad de barra activa
+});
 
+ //Funcionalidad de barra activa
 searchBar[0].addEventListener("focus", () =>{
     activeSection[0].style.display = "flex";
     normalSection[0].style.display = "none";
@@ -116,28 +149,69 @@ closeIcon[0].addEventListener("focus", () =>{
 })
 
 //Opciones Menú
-let favoriteSection = document.getElementsByClassName("favoritesSection")
-let searchSection = document.getElementsByClassName("searchBoxMain")
-let favOption = document.getElementById("favItem")
-let myGifsSection = document.getElementsByClassName("myGifsSection")
-let myOption = document.getElementById("myItem")
-
-let logo= document.getElementsByClassName("logo")[0];
 logo.addEventListener("click", ()=>{
     searchSection[0].style.display = "block";
+    trendingSection[0].style.display = "block";
     favoriteSection[0].style.display = "none";
-    myGifsSection[0].style.display = "none"
+    myGifsSection[0].style.display = "none";
+    createSection[0].style.display = "none";
 })
 favOption.addEventListener("click", () =>{
     favoriteSection[0].style.display = "block";
+    trendingSection[0].style.display = "block";
     searchSection[0].style.display = "none";
-    myGifsSection[0].style.display = "none"
+    myGifsSection[0].style.display = "none";
+    createSection[0].style.display = "none";
 })
 myOption.addEventListener("click", () =>{
-    myGifsSection[0].style.display = "block"
+    myGifsSection[0].style.display = "block";
+    trendingSection[0].style.display = "block";
     searchSection[0].style.display = "none";
     favoriteSection[0].style.display = "none";
+    createSection[0].style.display = "none";
 })
+newGifOption.addEventListener("click", () =>{
+    createSection[0].style.display = "flex";
+    myGifsSection[0].style.display = "none"
+    searchSection[0].style.display = "none";
+    favoriteSection[0].style.display = "none";
+    trendingSection[0].style.display = "none";
+})
+
+// let add_gifo_cards_finded = () => {
+//     //verificamos que se hayan obtenido resultados en la busqueda
+//     if(gifos_searched_array.length != 0){
+//         search_without_result_container.style.display ="none";//ocultar contenedor de "sin resultados"
+//         results_container.style.display = "block";//mostrar el container de resultados por si fue oculto en una acción anterior
+//         see_more_button_search.style.display = "block";//mostrar el botón ver más por si fue oculto en una acción anterior
+//         if(num_gifos_results <= gifos_searched_array.length){
+//             //verificamos el valor final para el ciclo teniendo en cuenta que se deben agregar de a 12 gifos
+//             //además, controlamos que en el utilmo ciclo no se vaya a pasar la longitud de los gifos encontrados por la API
+//             let lim_sup = num_gifos_results+12 <= gifos_searched_array.length? 
+//                 num_gifos_results+12: 
+//                 num_gifos_results+(gifos_searched_array.length-num_gifos_results)
+//             ;
+//             for(let i=num_gifos_results; i<(lim_sup);i++){
+//                 add_gifo_card(results_gifos_section,"gifo-searched",gifos_searched_array,i);
+//             }
+//             //la variable la igualamos al número de gifos cards agregados hasta el momento y será utilizado al ser llamada
+//             //  de nuevo la función
+//             num_gifos_results = gifos_box_searched.length;
+//         }
+//         //si llegó al ultimo gif ocultamos el botón ver más
+//         if(gifos_searched_array.length == num_gifos_results){
+//             see_more_button_search.style.display = "none";
+//         }
+//     }
+//     else{//si no se obtuvo resultados se muestra el bloque de "sin resultados"
+//         results_container.style.display = "none";
+//         search_without_result_title.innerHTML = search_input[0].value;
+//         search_without_result_container.style.display ="block";
+//     }
+// }
+
+
+
 
 
 // for(let i=0; i<(ciclode12); i++){

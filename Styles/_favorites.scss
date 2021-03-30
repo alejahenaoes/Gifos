@@ -16,7 +16,7 @@
         .titleFavorites{
             margin-top: 7px;
             font-family: $MonsBold;
-            color: #572EE5;
+            color: $purpleMain;
             font-size: 20px;
             line-height: 30px;
         }
@@ -43,7 +43,7 @@
         font-weight: 700;
         text-align: center;
         letter-spacing: 0;
-        color: #50E3C2;
+        color: $blueActive;
     }
 }
 .gridFavorites{
@@ -55,7 +55,7 @@
     .favImage{
         width: 156px;
         height: 120px;
-        background-color: black;
+        background-color:$blackTextColor;
         margin: 21px 21px 0px 0px;
     }
 }
