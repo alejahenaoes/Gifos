@@ -6,7 +6,6 @@
   padding: 0;
   border: 0;
   font-size: 14px;
-  background-color: white;
 }
 
 .allSearch {
@@ -30,6 +29,7 @@
 }
 
 .allSearch .searchBar input {
+  background-color: transparent;
   outline: none;
   width: 215px;
   position: absolute;
@@ -45,6 +45,10 @@
   margin: 14px 16px 15px 292px;
 }
 
+.allSearch .iconSearch button {
+  background-color: transparent;
+}
+
 .allSearch .active {
   position: absolute;
   z-index: 1;
@@ -57,6 +61,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   display: none;
+}
+
+.allSearch .active .iconSearchActive, .allSearch .active .closeSearch {
+  background-color: transparent;
 }
 
 .allSearch .suggestionsCtn {
@@ -96,6 +104,7 @@
 
 .allSearch .suggestionsCtn .iconSearchSuggestion {
   margin-right: 14.6px;
+  background-color: transparent;
 }
 
 .gifosSearch {
@@ -266,7 +275,6 @@
   padding: 0;
   border: 0;
   font-size: 14px;
-  background-color: white;
 }
 
 .favoritesSection {
@@ -378,7 +386,6 @@
   padding: 0;
   border: 0;
   font-size: 14px;
-  background-color: white;
 }
 
 .myGifsSection {
@@ -490,7 +497,6 @@
   padding: 0;
   border: 0;
   font-size: 14px;
-  background-color: white;
 }
 
 .createSection {
@@ -595,13 +601,22 @@
   }
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 14px;
+.pageContainer.darkMode {
+  background-color: #37383C;
+}
+
+.searchBoxMain .darkMode {
+  background-color: #37383C;
+}
+
+.navbar .menu.darkMode {
+  background-color: black;
+}
+
+@media (min-width: 768px) {
+  .navbar .menu.darkMode {
+    background-color: transparent;
+  }
 }
 
 * {
@@ -611,7 +626,6 @@
   padding: 0;
   border: 0;
   font-size: 14px;
-  background-color: white;
 }
 
 html {
@@ -665,7 +679,6 @@ a {
 
 .navbar .hamburguerMenu .checkboxMenu:checked ~ div {
   height: 100vh;
-  background-color: #572EE5;
 }
 
 .navbar .menu {
@@ -695,12 +708,12 @@ a {
 .navbar .menu li {
   height: 60px;
   width: 100%;
-  background-color: #572EE5;
+  background-color: transparent;
   margin: 16px 0 8px 0px;
 }
 
 .navbar .menu li .navItem {
-  background-color: #572EE5;
+  background-color: transparent;
   text-decoration: none;
   color: white;
   font-size: 15px;
@@ -756,7 +769,12 @@ a {
   display: block;
 }
 
+.searchBoxMain {
+  background-color: white;
+}
+
 .tittleHome h3 {
+  background-color: transparent;
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
   font-weight: bold;
@@ -784,13 +802,14 @@ a {
 }
 
 .night, .favos, .mine {
-  background-color: #572EE5;
+  background-color: transparent;
 }
 
 .night .lineaMenu, .favos .lineaMenu, .mine .lineaMenu {
   width: 41px;
   height: 0.1px;
   margin: auto;
+  background: white;
   -webkit-transform: translate(0px, -12px);
           transform: translate(0px, -12px);
 }
@@ -837,7 +856,7 @@ h6 {
 }
 
 .trendingSection .titleSection h2 {
-  background-color: #F3F5F8;
+  background-color: transparent;
   font-family: "Montserrat", sans-serif;
   color: #572EE5;
   text-align: center;
@@ -854,7 +873,7 @@ h6 {
   height: 46px;
   line-height: 23px;
   text-align: center;
-  background-color: #F3F5F8;
+  background-color: transparent;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -985,6 +1004,7 @@ h6 {
   height: 196px;
   padding-top: 47px;
   margin: auto;
+  background-color: transparent;
 }
 
 .footer div {
@@ -1104,7 +1124,7 @@ h6 {
   }
   .navbar .night:hover .lineaMenu, .navbar .favos:hover .lineaMenu, .navbar .mine:hover .lineaMenu {
     width: auto;
-    height: 5px;
+    height: 2px;
     margin: auto;
     background-color: turquoise;
   }

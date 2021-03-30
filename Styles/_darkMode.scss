@@ -1,8 +1,27 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 14px;
-    // background-color: $greyDM;
+// * {
+//     // box-sizing: border-box;
+//     // margin: 0;
+//     // padding: 0;
+//     // border: 0;
+//     // font-size: 14px;
+//     // background-color: $greyDM;
+// }
+.pageContainer.darkMode{
+    background-color: $greyDM;
 }
+.searchBoxMain .darkMode{
+    background-color: $greyDM;
+}
+.navbar{
+    .menu.darkMode{
+        background-color: black;
+    }
+}
+@media (min-width:768px){
+    .navbar{
+        .menu.darkMode{
+            background-color: transparent;
+        }
+    } 
+}
+//     // background-color: $greyDM;

@@ -10,7 +10,7 @@
   padding: 0;
   border: 0;
   font-size: 14px;
-  background-color: white;
+  // background-color: white;
 }
 
 html {
@@ -21,6 +21,7 @@ a{
   text-decoration: none;
   cursor: pointer;
 }
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -47,7 +48,7 @@ a{
     }
     .checkboxMenu:checked~div {
       height: 100vh;
-      background-color: $purpleMain;
+      // background-color: $purpleMain;
     }
   }
   .menu {
@@ -68,10 +69,10 @@ a{
     li {
       height: 60px;
       width: 100%;
-      background-color: $purpleMain;
+      background-color: transparent;
       margin: 16px 0 8px 0px;
       .navItem{
-        background-color: $purpleMain;
+        background-color: transparent;
         text-decoration: none;
         color: white;
         font-size: 15px;
@@ -119,8 +120,11 @@ a{
       }
   }
 }
-
+.searchBoxMain{
+  background-color: white;
+}
 .tittleHome h3{
+  background-color: transparent;
   font-family: $MonsBold;
   font-size: 25px;
   font-weight: bold;
@@ -144,11 +148,12 @@ height: 5px;
 background-color: $purpleMain;
 }
 .night, .favos, .mine{
-  background-color: $purpleMain;
+  background-color: transparent;
   .lineaMenu {
     width: 41px;
     height: 0.1px;
     margin: auto;
+    background: white;
     transform: translate(0px, -12px);
   }
 }
@@ -191,7 +196,7 @@ h6 {
   padding-top: 46px;
   display: block;
   .titleSection h2{
-      background-color: #F3F5F8;
+      background-color: transparent;
       font-family: $MonsBold;
       color: $purpleMain;
       text-align: center;
@@ -207,7 +212,7 @@ h6 {
       height: 46px;
       line-height: 23px;
       text-align: center;
-      background-color: #F3F5F8;
+      background-color: transparent;
       font-family: $robotoReg;
       font-weight: 400;
       font-size: 16px;
@@ -320,6 +325,7 @@ h6 {
     height: 196px;
     padding-top: 47px;
     margin: auto;
+    background-color: transparent;
     div{
         font-family: $robotoReg;
         font-size: 15px;
@@ -380,6 +386,7 @@ h6 {
         display: flex;
         flex-direction: row;
         margin-right: 156px;
+    
         li {
           height: 60px;
           width: auto;
@@ -416,7 +423,7 @@ h6 {
       &:hover{
         .lineaMenu {
           width: auto;
-          height: 5px;
+          height: 2px;
           margin: auto;
           background-color: turquoise;
         }

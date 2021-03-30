@@ -4,7 +4,7 @@
     padding: 0;
     border: 0;
     font-size: 14px;
-    background-color: white;
+    // background-color: white;
   }
 .allSearch{
   height: 52px; //con 257 se "despliega"
@@ -19,6 +19,7 @@
     justify-content: center;
     border-radius: 27px;
       input{
+        background-color: transparent;
         outline: none;
         width: 215px;
         position: absolute;
@@ -30,6 +31,9 @@
       display: flex;
       position: absolute;
       margin: 14px 16px 15px 292px;
+      button{
+        background-color: transparent;
+      }
     }
     .active{
       position: absolute;
@@ -39,6 +43,9 @@
       display: flex;
       justify-content: space-between;
       display: none;
+      .iconSearchActive, .closeSearch{
+        background-color: transparent;
+      }
     }
     .suggestionsCtn{
         display: none; //con block
@@ -71,6 +78,7 @@
         }
         .iconSearchSuggestion{
             margin-right: 14.6px;
+            background-color: transparent;
         }
     }
 }
