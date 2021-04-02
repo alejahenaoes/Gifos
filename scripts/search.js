@@ -27,37 +27,58 @@ let searchInput = document.getElementsByClassName("input")[0];
 
 
 let card = document.getElementsByClassName("gifsSearch");
+let cardTemplate = card[0];
 let ctn = document.getElementsByClassName("gridTemplate");
+let verMasBtn = document.getElementsByClassName("verMas")[0];
+
 
 //Clonar template
-for(let i=0; i<12; i++){
-    let boxTemplateSearch1 = (card)[0].cloneNode(true);
-    boxTemplateSearch1.classList.toggle("Search"+i);
-    (ctn)[0].appendChild(boxTemplateSearch1);
-    (card)[i+1].style.display = "inline-block";
+let gifosResults = 0; //almacena el conteo
+let limitGifos = 50;
+function createCards(){
+    let limitSup = gifosResults+12 <= limitGifos ? 12 : (limitGifos - gifosResults);
+    for(let i=0; i<limitSup; i++){
+        let boxTemplateSearch = (cardTemplate).cloneNode(true);
+        (boxTemplateSearch).style.display = "inline-block";
+        (ctn)[0].appendChild(boxTemplateSearch);
+    }
+    gifosResults = card.length;
 }
 window.onload = function(){
     ctn[0].removeChild(card[0]);
 }
-// function verMas(){
-//     for(let i=0; i<24; i++){
-//         let boxTemplateSearch2 = (card)[0].cloneNode(true);
-//         boxTemplateSearch2.classList.toggle("Search"+i);
-//         (ctn)[0].appendChild(boxTemplateSearch2);
-//         (card)[i+1].style.display = "inline-block";
-//         (card)[i+1].style.backgroundColor = "red";
-//     }
-// }
 
-function sendApiRequest(){
+//variable que llame a  los de clase search[i]
+function verMas(){
+    // sendApiRequest();
+    //nos permitirá saber el tope
+    if(gifosResults == limitGifos){
+        verMasBtn.style.display = "none";
+    }
+}
+let gifsToAdd = 12;
+verMasBtn.addEventListener("click", ()=>{
+    verMas();
+    gifsToAdd += 12; 
+    sendApiRequest(gifsToAdd);
+})
+
+
+//variable para meter los que llevamos = 0
+//con data.length
+
+
+function sendApiRequest(limitSup){
     let userInput = document.getElementById("input").value
     console.log(userInput)
-    const searchApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&${apiKey}`
+    createCards();
+    const searchApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&${apiKey}`;
     fetch(searchApiURL).then(function(data){
         return data.json()
     })
         .then(function(json){
-                for (let i=0; i < 12; i++){
+            limitSup = limitSup <= json.data.length ? limitSup : json.data.length;
+                for (let i=0; i < limitSup; i++){
                     // console.log(json.data)
                     console.log(json.data[i].images.fixed_height.url)
                     let imgPath = json.data[i].images.fixed_height.url
@@ -71,13 +92,6 @@ function sendApiRequest(){
                     let userGifApi =json.data[i].username;
                     userGif[i].textContent = userGifApi;
                 }
-                // suggestionBox[0].addEventListener("click", ()=>{
-                //     alert("Hola")
-                // })
-                // let resultsGifos = [];
-                // resultsGifos.push(imgSearch);
-                // console.log(resultsGifos)
-                // gifos_searched_array.push(gifo);
             }).catch(function(){
                     alert("Busqueda inválida")
             })
@@ -85,9 +99,9 @@ function sendApiRequest(){
 
 //Autocompletar
 function autocomplete(){
-    let userInput = document.getElementById("input").value
-    if(userInput != ""){
-        let q = `q=${userInput}`;
+    let userInput = document.getElementById("input");
+    if(userInput.value != ""){
+        let q = `q=${userInput.value}`;
         let Autocomplete = "https://api.giphy.com/v1/gifs/search/tags?"+q+"?&"+apiKey;
         fetch(Autocomplete)
         .then(response => response.json())
@@ -98,12 +112,15 @@ function autocomplete(){
                 suggestionContent[i].textContent = content;
                 suggestionContent[i].style.display = "inline-block";
                 //click suggestion
-                suggestionBox[i].addEventListener("click", ()=>{
-                    // let clickSuggestion = content
-                    // userInput = content[i]
-                    // userInput.value = content[i];
-                    // sendApiRequest();
-                    // alert("Hi")
+                suggestionBox[i].addEventListener("click", (event)=>{
+                    let suggestionPath = event.path[1].innerText;
+                    userInput.value = suggestionPath;
+                    sendApiRequest(gifsToAdd);
+                    removeSearch();
+                    searchSpace[0].style.display = "inline-block";
+                    suggestionsBar[0].style.height = "52px";
+                    suggestionsCtn[0].style.display = "none";
+                    // alert("Hola")
                 })
             }
             console.log(datos.data.length) //Array con datos
@@ -115,13 +132,22 @@ function autocomplete(){
         suggestionsBar[0].style.height = "52px";
     }
 }
-
+//Eliminar busqueda anterior
+function removeSearch(){
+    for(let i = gifosResults-1;i >= 0;i--){
+        (ctn)[0].removeChild(card[i]);
+    }
+    gifsToAdd = 12;
+    gifosResults = 0;
+    verMasBtn.style.display = "block";
+}
 
 //Poder buscar con enter
 searchBar[0].addEventListener('keyup', (event) => {
     if (event.keyCode === 13) {
-        sendApiRequest()
-        searchSpace[0].style.display = "inline-block"
+        removeSearch();
+        sendApiRequest(gifsToAdd);
+        searchSpace[0].style.display = "inline-block";
         suggestionsBar[0].style.height = "52px";
         suggestionsCtn[0].style.display = "none";
     }else{ //presionando otra tecla diferente a enter

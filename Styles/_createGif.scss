@@ -27,6 +27,14 @@
             height: 348px;
             .inner{
                 margin-top: 114px;
+                display: none;
+            }
+            .camStream{
+                // margin: 35px 104px;
+                // Se ve el video
+                width: 480px;
+                height: 320px;
+                background-color: red;
             }
             .createTitleMain, .gifosWord{
                 font-family: $MonsBold;

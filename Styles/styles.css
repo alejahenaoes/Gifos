@@ -525,6 +525,12 @@
   }
   .createSection .createCtn .step1Text .inner {
     margin-top: 114px;
+    display: none;
+  }
+  .createSection .createCtn .step1Text .camStream {
+    width: 480px;
+    height: 320px;
+    background-color: red;
   }
   .createSection .createCtn .step1Text .createTitleMain, .createSection .createCtn .step1Text .gifosWord {
     font-family: "Montserrat", sans-serif;
