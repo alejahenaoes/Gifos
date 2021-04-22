@@ -50,7 +50,7 @@
         <!-- </header> -->
         <section class="searchBoxMain">
                 <div class="tittleHome">
-                    <h3>Inspírate, busca, guarda, y crea los mejores <span class="gifosWord" style="color: #50E3C2;">GIFOS</span></h3>
+                    <h3 class="tittleHome">Inspírate, busca, guarda, y crea los mejores <span class="gifosWord" style="color: #50E3C2;">GIFOS</span></h3>
         <!-- Main section home -->
         <div class="searchbox"> 
             <div class="imageTopSearch">
@@ -136,9 +136,8 @@
                         <img src="./assets/CTA-ver-mas.svg" alt="vermas" class="verMasBtn">
                     </div>
             </div>
-                <h6>Trending:</h6>
+                <h6 class="tittleTrending">Trending:</h6>
                 <div class="textDownBar">
-                    <!-- <p>Reactions, Entertainment, Sports, Stickers, Artists</p> -->
                 </div>
             </div>
         </section>
@@ -154,26 +153,26 @@
             </div>
             <div class="gridFavorites">
                 <div class="favImage">
-                    <img src="" alt="">
-                    <div class="hoverStyleSearch">
-                        <figure class="hoverOptionsSearch">
-                            <div class="optionsGifSearch">
-                                <div class="favsSearch">
-                                    <img src="assets/icon-fav.svg" alt="favBtn" class="normalSearch btn" id="favBtnNormal">
-                                    <img src="assets/icon-fav-hover.svg" alt="favBtn" class="btnHoverSearch btn">
+                    <img src="" alt="" class="myFavGif">
+                    <div class="hoverStyleFavs">
+                        <figure class="hoverOptionsFavs">
+                            <div class="optionsGifFavs">
+                                <div class="favsFavs">
+                                    <img src="assets/icon-fav.svg" alt="favBtn" class="normalFavs btn" id="favBtnNormal">
+                                    <img src="assets/icon-fav-hover.svg" alt="favBtn" class="btnHoverFavs btn">
                                 </div>
-                                <div class="downSearch">
-                                    <img src="assets/icon-download.svg" alt="dowBtn" class="normalSearch btn">
-                                    <img src="assets/icon-download-hover.svg" alt="dowBtn" class="btnHoverSearch btn">
+                                <div class="downFavs">
+                                    <img src="assets/icon-download.svg" alt="dowBtn" class="normalFavs btn">
+                                    <img src="assets/icon-download-hover.svg" alt="dowBtn" class="btnHoverFavs btn">
                                 </div>
-                                <div class="maxSearch">
-                                    <img src="assets/icon-max-normal.svg" alt="maxBtn" class="normalSearch btn">
-                                    <img src="assets/icon-max-hover.svg" alt="maxBtn" class="btnHoverSearch btn">
+                                <div class="maxFavs">
+                                    <img src="assets/icon-max-normal.svg" alt="maxBtn" class="normalFavs btn">
+                                    <img src="assets/icon-max-hover.svg" alt="maxBtn" class="btnHoverFavs btn">
                                 </div>
                             </div>
-                            <div class="textGifSearch">
-                                <p id="user" class="userSearch">User</p>
-                                <p id="titleGif" class="titleGifSearch">Título GIFO</p>
+                            <div class="textGifFavs">
+                                <p id="user" class="userFavs">User</p>
+                                <p id="titleGif" class="titleGifFavs">Título GIFO</p>
                             </div>
                         </figure>
                     </div>
@@ -195,33 +194,33 @@
             </div>
             <div class="gridMyGifs">
                 <div class="myImage">
-                    <img src="" alt="">
-                    <div class="hoverStyleSearch">
-                        <figure class="hoverOptionsSearch">
-                            <div class="optionsGifSearch">
-                                <div class="favsSearch">
-                                    <img src="assets/icon-fav.svg" alt="favBtn" class="normalSearch btn" id="favBtnNormal">
-                                    <img src="assets/icon-fav-hover.svg" alt="favBtn" class="btnHoverSearch btn">
+                    <img src="" alt="gifNuevo" class="myNewGif">
+                    <div class="hoverStyleNew">
+                        <figure class="hoverOptionsNew">
+                            <div class="optionsGifNew">
+                                <div class="trashNew">
+                                    <img src="assets/icon-trash-normal.svg" alt="trashBtn" class="normalNew btn" id="trashBtnNormal">
+                                    <img src="assets/icon-trash-hover.svg" alt="trashBtn" class="btnHoverNew btn">
                                 </div>
-                                <div class="downSearch">
-                                    <img src="assets/icon-download.svg" alt="dowBtn" class="normalSearch btn">
-                                    <img src="assets/icon-download-hover.svg" alt="dowBtn" class="btnHoverSearch btn">
+                                <div class="downNew">
+                                    <img src="assets/icon-download.svg" alt="dowBtn" class="normalNew btn">
+                                    <img src="assets/icon-download-hover.svg" alt="dowBtn" class="btnHoverNew btn">
                                 </div>
-                                <div class="maxSearch">
-                                    <img src="assets/icon-max-normal.svg" alt="maxBtn" class="normalSearch btn">
-                                    <img src="assets/icon-max-hover.svg" alt="maxBtn" class="btnHoverSearch btn">
+                                <div class="maxNew">
+                                    <img src="assets/icon-max-normal.svg" alt="maxBtn" class="normalNew btn">
+                                    <img src="assets/icon-max-hover.svg" alt="maxBtn" class="btnHoverNew btn">
                                 </div>
                             </div>
-                            <div class="textGifSearch">
-                                <p id="user" class="userSearch">User</p>
-                                <p id="titleGif" class="titleGifSearch">Título GIFO</p>
+                            <div class="textGifNew">
+                                <p id="user" class="userNew">User</p>
+                                <p id="titleGif" class="titleGifNew">Título GIFO</p>
                             </div>
                         </figure>
                     </div>
                 </div>
-                <div class="seeMore">
-                    <img src="./assets/CTA-ver-mas.svg" alt="vermas" class="verMasBtnmyGifs">
-                </div>
+            </div>
+            <div class="seeMore">
+                <img src="./assets/CTA-ver-mas.svg" alt="vermas" class="verMasBtnmyGifs">
             </div>
         </section>
         <!-- Trending -->
@@ -244,9 +243,12 @@
                             <div class="hoverStyle">
                                 <figure class="hoverOptions">
                                     <div class="optionsGif">
-                                        <div class="favs">
+                                        <div class="favs favsTr" onclick="activateFunctionTr(this)">
                                             <img src="assets/icon-fav.svg" alt="favBtn" class="normal btn" id="favBtnNormal">
                                             <img src="assets/icon-fav-hover.svg" alt="favBtn" class="btnHover btn">
+                                        </div>
+                                        <div class="favs activeTr">
+                                            <img src="./assets/icon-fav-active.svg" alt="" class="btnActiveTr">
                                         </div>
                                         <div class="down">
                                             <img src="assets/icon-download.svg" alt="dowBtn" class="normal btn">
@@ -280,12 +282,18 @@
                 <div class="createCtn">
                     <div class="step1Text">
                         <div class="inner">
-                            <h2 class="createTitleMain">Aquí podrás</h2><br>
-                            <h2 class="createTitleMain">crear tus propios<span class="gifosWord"> GIFOS</span></h2>
-                            <p class="createContent">¡Crea tu GIFO en sólo 3 pasos!</p>
-                            <p class="createContent">(sólo necesitas una cámara para grabar un video)</p>
+                            <h2 class="createTitleMain">Aquí podrás<br>
+                            crear tus propios<span class="gifosWord"> GIFOS</span></h2>
+                            <p class="createContent">¡Crea tu GIFO en sólo 3 pasos!<br>
+                            (sólo necesitas una cámara para grabar un video)</p>
                         </div>
                         <video src="./" class="camStream"></video>
+                        <div class="uploadingBox" id="uploanndingGif">
+                            <div class="uploadingContent">
+                                <img src="./assets/loader.svg" alt="gifo creado" class="uploadingIcon">
+                                <p class="uploadingText">Estamos subiendo tu GIFO</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="stepsOptions">
                         <div class="steps">
@@ -293,12 +301,13 @@
                             <div class="item2">2</div>
                             <div class="item3">3</div>
                         </div>
+                        <div class="timekeeperItem" id="timekeeper">00:00:00</div>
                     </div>
                     <div class="createButtons">
                         <button class="start btn" id="startBtn">COMENZAR</button>
-                        <!-- <button class="record btn">GRABAR</button>
-                        <button class="finish btn">FINALIZAR</button>
-                        <button class="upload btn">SUBIR GIFO</button> -->
+                        <button class="record btn" id="recordBtn">GRABAR</button>
+                        <button class="finish btn" id="finishBtn">FINALIZAR</button>
+                        <button class="upload btn" id="uploadBtn">SUBIR GIFO</button>
                     </div>
                 </div>
                 <div class="movieIcon">
@@ -319,10 +328,13 @@
         </footer>
         <div class="purpleRectangle"></div>
     </div>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/search.js"></script>
+    <script src="./scripts/favorites.js"></script>
     <script src="./scripts/darkMode.js"></script>
     <script src="./scripts/create.js"></script>
+    <script src="./scripts/mygifs.js"></script>
 </body>
 </html>
 

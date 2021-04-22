@@ -10,68 +10,110 @@ let cross = document.getElementById("cross");
 let logoImgMob = document.getElementsByClassName("logoImg")[0];
 let burguerMenu = document.getElementsByClassName("menu")[0];
 let logoImgDes = document.getElementsByClassName("GifosLogo")[0];
+let purpleLine = document.getElementsByClassName("purpleRectangle");
+let burguerIcon = document.getElementsByClassName("burguerMenuIcon")[0];
+let closeIconMenu = document.getElementsByClassName("closeMenuIcon")[0];
+let mainTitle = document.getElementsByClassName("tittleHome")[1];
+let trendTitle = document.getElementsByClassName("tittleTrending")[0];
+let trendTopics = document.getElementsByClassName("textDownBar")[0];
+let borderInput = document.getElementsByClassName("allSearch");
+let menuItems = document.getElementsByClassName("navItem")[0];
+let menuItems2 = document.getElementsByClassName("navItem")[1];
+let menuItems3 = document.getElementsByClassName("navItem")[2];
+let titleFavs = document.getElementsByClassName("titleFavorites")[0];
+let titleMyGifs = document.getElementsByClassName("titlemyGifs")[0];
+let cameraImg = document.getElementsByClassName("camImg")[0];
+let movieImg = document.getElementsByClassName("movieImg")[0];
+let createCtn = document.getElementsByClassName("createCtn")[0];
+let titleCreate = document.getElementsByClassName("createTitleMain")[0];
+let titleCreate1 = document.getElementsByClassName("createTitleMain")[1];
+let stepsCreate = document.getElementsByClassName("stepsOptions")[0];
+let sliderRight = document.getElementsByClassName("button-r")[0];
+let sliderLeft = document.getElementsByClassName("button-l")[0];
+let verMasButton = document.getElementsByClassName("verMasBtn")[0];
+let btnStart = document.getElementsByClassName("start")[0];
+
 
 darkOption.addEventListener("click", ()=>{
     pageCtn.classList.toggle("darkMode");
     darkOption.innerHTML= darkOption.innerHTML == "Modo Diurno" ? "Modo Nocturno" : "Modo Diurno";
     if (darkOption.innerHTML == "Modo Diurno"){
     searchSection[0].style.background = "#37383C";
-    trendingSection[0].style.background = "#222326";
+    body.style.backgroundColor = "#37383C";
+    // trendingSection[0].style.background = "#222326";
+    trendingSection[0].classList.toggle("darkMode");
     footer.style.background = "#37383C";
+    footer.style.color = "white";
     iconSearch.style.background = "transparent";
     lupa.src = "./assets/icon-search-mod-noc.svg";
     cross.src = "./assets/close-modo-noct.svg";
     logoImgMob.src = "./assets/logo-mobile-modo-noct.svg";
     burguerMenu.classList.toggle("darkMode");
     logoImgDes.src = "./assets/Logo-modo-noc.svg";
-    
-    }
+    purpleLine[0].style.background = "black";
+    purpleLine[1].style.background = "black";
+    burguerIcon.src = "./assets/burger-modo-noct.svg";
+    closeIconMenu.src="./assets/close-modo-noct.svg";
+    mainTitle.style.color = "white";
+    trendTitle.style.color = "white";
+    trendTopics.style.color = "white";
+    borderInput[0].classList.toggle("darkMode");
+    menuItems.classList.toggle("darkMode");
+    menuItems2.classList.toggle("darkMode");
+    menuItems3.classList.toggle("darkMode");
+    newGifOption.src= "./assets/CTA-crear-gifo-modo-noc.svg";
+    titleFavs.style.color = "white";
+    titleMyGifs.style.color = "white";
+    cameraImg.src = "./assets/camara-modo-noc.svg";
+    movieImg.src= "./assets/pelicula-modo-noc.svg";
+    createCtn.classList.toggle("darkMode");
+    titleCreate.classList.toggle("darkMode");
+    // titleCreate1.classList.toggle("darkMode");
+    stepsCreate.classList.toggle("darkMode");
+    sliderRight.src="./assets/button-slider-right-md-noct.svg";
+    sliderLeft.src= "./assets/button-slider-left-md-noct.svg";
+    titleSearch.style.color = "white";
+    verMasButton.src = "./assets/CTA-ver+-modo-noc.svg";
+    searchInput.style.color = "white";
+    btnStart.classList.toggle("darkMode");
+}
     else{
+        body.style.backgroundColor = "white";
         searchSection[0].style.background = "white";
-        trendingSection[0].style.background = "#F3F5F8";
+        trendingSection[0].classList.toggle("darkMode");
         footer.style.background = "white";
+        footer.style.color = "black";
+        lupa.src = "./assets/icon-search.svg";
+        cross.src = "./assets/close.svg";
         logoImgMob.src = "./assets/logo-mobile.svg"
         logoImgDes.src = "./assets/logo-desktop.svg";
+        purpleLine[0].style.background = "#572EE5";
+        purpleLine[1].style.background = "#572EE5";
+        burguerMenu.classList.toggle("darkMode");
+        closeIconMenu.src = "./assets/close.svg";
+        burguerIcon.src = "./assets/burger.svg";
+        mainTitle.style.color = "#572EE5";
+        trendTitle.style.color = "#572EE5";
+        trendTopics.style.color = "#572EE5";
+        borderInput[0].classList.toggle("darkMode");
+        menuItems.classList.toggle("darkMode");
+        menuItems2.classList.toggle("darkMode");
+        menuItems3.classList.toggle("darkMode");
+        newGifOption.src="./assets/button-crear-gifo.svg";
+        titleFavs.style.color = "#572EE5";
+        titleMyGifs.style.color = "#572EE5";
+        cameraImg.src = "./assets/camara.svg";
+        movieImg.src= "./assets/pelicula.svg";
+        createCtn.classList.toggle("darkMode");
+        titleCreate.classList.toggle("darkMode");
+        titleCreate1.classList.toggle("darkMode");
+        stepsCreate.classList.toggle("darkMode");
+        titleSearch.style.color = "#572EE5";
+        searchInput.style.color = "black";
+        verMasButton.src = "./assets/CTA-ver-mas.svg";
+        sliderRight.src="./assets/button-Slider-right.svg";
+        sliderLeft.src= "./assets/button-slider-left.svg";
+        btnStart.classList.toggle("darkMode");
     }
-    // mainSection.classList.toggle("dark-Mode");
-    // allPage.classList.toggle("dark-mode");
 })
-// function changeBodyBg(){
-//     // body.style.backgroundColor = "#37383C";
-//     // document.body.style.background = color;
-//     // document.getElementById("explicacion").style.color = color2;
-//     // document.getElementById("date").style.color = color2;
-//     // document.getElementById("results").style.color = color2;
-//     // document.getElementById("titleMain").style.color = color2;
-//     // document.getElementById("logo").src ="https://fontmeme.com/permalink/210304/da534ab0d3957077c289cc6250e5e6fa.png";
-// }
-// darkOption.addEventListener("click", ()=>{
-//     changeBodyBg();
-//     // alert("Hola")
-// })
 
-// let body_page = document.getElementsByTagName("body")[0];
-// //Todo el body
-// let line = document.getElementsByClassName("purpleRectangle");//Nodo de las lineas superior e inferior
-// let logo = document.getElementsByClassName("logoImg");//Nodo del logo
-// let burger_icon = document.getElementsByClassName("burguer-menu");//Nodo del menú hamburguesa
-// let close_icon = document.getElementsByClassName("close-menu");//Nodo de cerrar el menú hamburguesa
-// // let close_icon_fs = document.getElementById("close-full-screen");//Nodo de cerrar GIFO full screen 
-// let night_mode = document.getElementById("btnNightMode");//nodo del Botón modo nocturno
-// let page_container = document.getElementsByClassName("page-container");// nodo del contenedor de la pagina
-// let btn_new_gifos = document.getElementsByClassName("btn-new-gifos-normal");//nodo del botón new gifo
-// let btn_new_gifos_hover = document.getElementsByClassName("btn-new-gifos-hover");//nodo del botón new gifos Hover
-// let btn_slider = document.getElementsByClassName("slider-icon");//nodo de botones de slider
-// let btn_slider_fs = document.getElementsByClassName("slider-icon-fs");//nodo de botones slider full screen
-// let btn_slider_hover = document.getElementsByClassName("slider-icon-hover");//nodo de botones de slider hover
-// let btn_slider_hover_fs = document.getElementsByClassName("slider-icon-hover-fs");//nodo de botones slider hover full screen
-// let search_icon = document.getElementsByClassName("search-icon");//nodo del icono de busqueda
-
-
-// let small_camara_tape_img = document.getElementsByClassName("small-camara-tape-img")[0];
-// let big_camara_tape_img = document.getElementsByClassName("big-camara-tape-img")[0];
-// let camara_body_img = document.getElementsByClassName("camara-body-img")[0];
-// let camara_tape_img = document.getElementsByClassName("camara-tape-img")[0];
-
-// let twitter_icon_normal = document.getElementsByClassName("twitter-icon-normal")[0];
-// let twitter_icon_hover = document.getElementsByClassName("twitter-icon-hover")[0];

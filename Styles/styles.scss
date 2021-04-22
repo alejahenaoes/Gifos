@@ -1,6 +1,6 @@
 @import 'variable.scss';
-@import '_searchSection.scss';
 @import '_favorites.scss';
+@import '_searchSection.scss';
 @import '_myGifs.scss';
 @import '_createGif.scss';
 @import '_darkMode.scss';
@@ -122,6 +122,7 @@ a{
 }
 .searchBoxMain{
   background-color: white;
+  display: block;//BLOOOOOCK
 }
 .tittleHome h3{
   background-color: transparent;
@@ -271,7 +272,7 @@ h6 {
       cursor: pointer;
       margin: 5px;
       border-radius: 6px;
-      .btnHover{
+      .btnHover, .btnActiveTr{
           display: none;
           }
           &:hover{
@@ -369,7 +370,7 @@ h6 {
         display: flex;
         .checkboxMenu {
           opacity: 0;
-          transform: translate(3px, 44px);
+          transform: translate(0px, 44px);
           height: 20px;
         }
         .checkboxMenu:checked~div {
@@ -420,6 +421,9 @@ h6 {
     .night, .favos, .mine{
       background-color: transparent;
       margin-right: 60px;
+      .lineaMenu{
+        background-color: transparent;
+      }
       &:hover{
         .lineaMenu {
           width: auto;

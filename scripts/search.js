@@ -44,14 +44,9 @@ function createCards(){
     }
     gifosResults = card.length;
 }
-window.onload = function(){
-    ctn[0].removeChild(card[0]);
-}
 
-//variable que llame a  los de clase search[i]
+
 function verMas(){
-    // sendApiRequest();
-    //nos permitirá saber el tope
     if(gifosResults == limitGifos){
         verMasBtn.style.display = "none";
     }
@@ -64,13 +59,9 @@ verMasBtn.addEventListener("click", ()=>{
 })
 
 
-//variable para meter los que llevamos = 0
-//con data.length
-
-
 function sendApiRequest(limitSup){
     let userInput = document.getElementById("input").value
-    console.log(userInput)
+    // console.log(userInput)
     createCards();
     const searchApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&rating=g&${apiKey}`;
     fetch(searchApiURL).then(function(data){
@@ -80,7 +71,7 @@ function sendApiRequest(limitSup){
             limitSup = limitSup <= json.data.length ? limitSup : json.data.length;
                 for (let i=0; i < limitSup; i++){
                     // console.log(json.data)
-                    console.log(json.data[i].images.fixed_height.url)
+                    // console.log(json.data[i].images.fixed_height.url)
                     let imgPath = json.data[i].images.fixed_height.url
                     imgSearch[i].setAttribute("src", imgPath)
                     imgSearch[i].id="imgGifSearch"+i; //se lo pone a la image
@@ -98,8 +89,8 @@ function sendApiRequest(limitSup){
 }
 
 //Autocompletar
+let userInput = document.getElementById("input");
 function autocomplete(){
-    let userInput = document.getElementById("input");
     if(userInput.value != ""){
         let q = `q=${userInput.value}`;
         let Autocomplete = "https://api.giphy.com/v1/gifs/search/tags?"+q+"?&"+apiKey;
@@ -111,17 +102,9 @@ function autocomplete(){
                 // console.log(content)
                 suggestionContent[i].textContent = content;
                 suggestionContent[i].style.display = "inline-block";
-                //click suggestion
-                suggestionBox[i].addEventListener("click", (event)=>{
-                    let suggestionPath = event.path[1].innerText;
-                    userInput.value = suggestionPath;
-                    sendApiRequest(gifsToAdd);
-                    removeSearch();
-                    searchSpace[0].style.display = "inline-block";
-                    suggestionsBar[0].style.height = "52px";
-                    suggestionsCtn[0].style.display = "none";
-                    // alert("Hola")
-                })
+                suggestionBox[i].style.cursor = "pointer";
+                // //click suggestion
+                suggestionBox[i].addEventListener("click", autocompleteSug);
             }
             console.log(datos.data.length) //Array con datos
             })
@@ -142,6 +125,17 @@ function removeSearch(){
     verMasBtn.style.display = "block";
 }
 
+//Onclick de sugerencias
+function autocompleteSug(event){
+    let suggestionPath = event.path[1].innerText;
+    userInput.value = suggestionPath;
+    removeSearch();
+    sendApiRequest(gifsToAdd);
+    searchSpace[0].style.display = "inline-block";
+    suggestionsBar[0].style.height = "52px";
+    suggestionsCtn[0].style.display = "none";
+}
+
 //Poder buscar con enter
 searchBar[0].addEventListener('keyup', (event) => {
     if (event.keyCode === 13) {
@@ -150,10 +144,9 @@ searchBar[0].addEventListener('keyup', (event) => {
         searchSpace[0].style.display = "inline-block";
         suggestionsBar[0].style.height = "52px";
         suggestionsCtn[0].style.display = "none";
+        // let userInput = document.getElementById("input").value = ""
     }else{ //presionando otra tecla diferente a enter
         autocomplete();
-        // suggestionsBar[0].style.height = "257px"; //las sugerencias
-        // suggestionsCtn[0].style.display = "block"; //las sugerencias
     }
 });
 
@@ -204,53 +197,3 @@ newGifOption.addEventListener("click", () =>{
     trendingSection[0].style.display = "none";
 })
 
-// let add_gifo_cards_finded = () => {
-//     //verificamos que se hayan obtenido resultados en la busqueda
-//     if(gifos_searched_array.length != 0){
-//         search_without_result_container.style.display ="none";//ocultar contenedor de "sin resultados"
-//         results_container.style.display = "block";//mostrar el container de resultados por si fue oculto en una acción anterior
-//         see_more_button_search.style.display = "block";//mostrar el botón ver más por si fue oculto en una acción anterior
-//         if(num_gifos_results <= gifos_searched_array.length){
-//             //verificamos el valor final para el ciclo teniendo en cuenta que se deben agregar de a 12 gifos
-//             //además, controlamos que en el utilmo ciclo no se vaya a pasar la longitud de los gifos encontrados por la API
-//             let lim_sup = num_gifos_results+12 <= gifos_searched_array.length? 
-//                 num_gifos_results+12: 
-//                 num_gifos_results+(gifos_searched_array.length-num_gifos_results)
-//             ;
-//             for(let i=num_gifos_results; i<(lim_sup);i++){
-//                 add_gifo_card(results_gifos_section,"gifo-searched",gifos_searched_array,i);
-//             }
-//             //la variable la igualamos al número de gifos cards agregados hasta el momento y será utilizado al ser llamada
-//             //  de nuevo la función
-//             num_gifos_results = gifos_box_searched.length;
-//         }
-//         //si llegó al ultimo gif ocultamos el botón ver más
-//         if(gifos_searched_array.length == num_gifos_results){
-//             see_more_button_search.style.display = "none";
-//         }
-//     }
-//     else{//si no se obtuvo resultados se muestra el bloque de "sin resultados"
-//         results_container.style.display = "none";
-//         search_without_result_title.innerHTML = search_input[0].value;
-//         search_without_result_container.style.display ="block";
-//     }
-// }
-
-
-
-
-
-// for(let i=0; i<(ciclode12); i++){
-//     let boxTemplateSearch = (cardTemplate del html)[0].cloneNode(true);
-//      boxTemplateSearch.classList.toggle("nombreEspecificoSearch");
-//     (contenedorPadre)[0].appendChild(cardTemplate del html);
-//     (cardTemplate del html)[i+1].style.display = "inline-block"; -> por defecto oculto
-// }
-
-//EVENTO A LOS CNT PARA QUE SU CONTENIDO SE PASE A SER EL VALUE DEL INPUT
-//PONER IMG MAQUETEADAS Y SOLO CAMBIAR EL SRC
-
-
-//1. Modificar el estilaje del gifo template por medio de una nueva clase
-//2. Crear un ciclo que permita agregar solo 12 tarjetas
-//3. en cada iteración agregar a gifcard template la clase que me modifica el estilo para search y favs y mis gifos
